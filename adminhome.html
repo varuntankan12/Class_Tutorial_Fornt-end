@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Admin | ClassTutorial</title>
+    <link rel="stylesheet" href="Styles/Navbar.css">
+    <link rel="stylesheet" href="Styles/Common.css">
+    <link rel="stylesheet" href="Styles/Button.css">
+    <link rel="stylesheet" href="Styles/AdminHome.css">
+    <link rel="stylesheet" href="Styles/AdminSidePanel.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="/index.html" class="link"><img src="assets/Class_tutorials.png" alt="logo" class="logo"></a>
+
+                <div class="nav-content flex-center">
+                    <div class="nav-profile flex-center">
+                        <img src="assets/Hamburger_icon.svg" alt="hamburger" class="hamburger hidden" id="hamburger">
+                        <div class="profile-image" id="profile">
+                            <img src="assets/profile.svg" alt="profile" class="profile">
+                        </div>
+                    </div>
+                    <!-- <a href="#" class="link" style="color: #9BD6FF;">Login/Sign-up</a> -->
+                    <div class="profile-details flex-center hidden" id="profile_details">
+                        <a href="/adminlogin.html" class="link">Log-out</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-center">
+        <div class="main-container flex-center">
+            <div class="side-panel">
+                <ul class="flex-center-column">
+                    <li class="active"><a href="/adminhome.html">Home</a></li>
+                    <li class=""><a href="/admineditteacher.html">Edit Teachers</a></li>
+                    <li class=""><a href="/admineditcourses.html">Edit Courses</a></li>
+                    <li class=""><a href="/admineditsubject.html">Edit Subjects</a></li>
+                </ul>
+            </div>
+            <div class="home-content flex-center-column">
+                <h1>Welcome Admin</h1>
+                <p>The admin page enables administrators to manage user accounts, curate content, and ensure smooth operation of the
+                website.</p>
+                <button class="button admin-login-button flex-center"><a href="/adminlogin.html" class="link">Log-out</a></button>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="Scripts/navbar.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+.footer {
+    background-color: var(--white);
+    width: 100vw;
+    width: 100svw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-level-1 {
+    width: 100vw;
+    width: 100svw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0 26px 0;
+}
+
+.level-1-container {
+    width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+.footer-img {
+    width: 148px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 65px;
+}
+
+.footer-content-div {
+    width: 175px;
+}
+
+.footer-content-div ul {
+    list-style-type: none;
+}
+
+.footer-content-div ul li {
+    margin: 0 0 6px 4px;
+}
+
+.footer-content-div a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--text-color);
+}
+
+.footer-content-div h3 {
+    color: var(--heading-color);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bolder;
+    margin-bottom: 12px;
+}
+
+
+
+.footer-level-2 {
+    width: 100vw;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(60, 110, 113, 0.25);
+}
+
+.level-2-container {
+    width: 1440px;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 100px 0 100px;
+}
+
+.level-2-container p {
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.social-media-links {
+    display: flex;
+    gap: 33px;
+}
+
+@media (max-width:768px) {
+    .level-1-container{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 46px;
+    }
+
+    .footer-img{
+        margin: 0 36px;
+    }
+
+    .footer-content{
+        flex-direction: column;
+        gap: 28px;
+        padding: 0 30px;
+    }
+
+    .footer-content-div ul li{
+        padding: 0 12px;
+    }
+
+    .level-2-container{
+        flex-direction: column-reverse;
+        gap: 12px;
+    }
+
+    .level-2-container p{
+        width: 100vw;
+        text-align: center;
+    }
+
+    .social-media-links{
+        margin: 24px 0;
+    }
+}

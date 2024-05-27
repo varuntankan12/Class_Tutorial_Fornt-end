@@ -1,0 +1,27 @@
+.button {
+    background-color: var(--button-color);
+    color: var(--white);
+    border-radius: 8px;
+    box-shadow: inset -2px -2px rgba(255, 255, 255, 0.50);
+    padding: 12px 24px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-top: 24px;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+@media (max-width:768px) {
+    .button {
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 500;
+        margin-top: 24px;
+        border: none;
+    }
+}

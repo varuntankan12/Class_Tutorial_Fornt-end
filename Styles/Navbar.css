@@ -1,0 +1,138 @@
+.navbar {
+    width: 100vw;
+    height: 70px;
+    background-color: rgba(60, 111, 114, 0.75);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-container {
+    width: 1440px;
+    max-width: 1440px;
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 76px 0 76px;
+}
+
+.logo {
+    width: 228px;
+}
+
+.nav-content,
+.nav-list,
+.nav-profile {
+    gap: 24px;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.nav-list {
+    display: flex;
+    gap: 24px;
+}
+
+.profile-image {
+    background-color: var(--bg-color);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile {
+    height: inherit;
+    width: inherit;
+}
+
+.profile-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 8px;
+    gap: 12px;
+    position: absolute;
+    background-color: #fff;
+    bottom: -92px;
+    right: 4px;
+    z-index: 99;
+}
+
+.profile-details::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    transform: rotate(45deg);
+}
+
+.profile-details>a {
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        height: 52px;
+    }
+
+    .navbar-container {
+        margin: 0 10px 0 10px;
+    }
+
+    .logo {
+        width: 148px;
+    }
+
+    .nav-content {
+        position: static;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 46px;
+        width: 100vw;
+        left: 0px;
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 0 12px;
+        display: none;
+    }
+
+    .nav-list a {
+        color: var(--text-color);
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 500;
+    }
+
+    .nav-profile {
+        gap: 10px;
+    }
+
+    .nav-profile .hamburger {
+        display: block;
+    }
+
+    .profile-image {
+        height: 36px;
+        width: 36px;
+    }
+}

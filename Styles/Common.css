@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+:root {
+    --bg-color: #f4f4f4;
+    --bg-color2: #d9d9d9;
+    --heading-color: #3C6E71;
+    --button-color: #284B63;
+    --text-color: #353535;
+    --white: #ffffff;
+    --red: #D02727;
+    --link-color: #2B82BD;
+    --fill-color: #6E727F;
+}
+
+.link {
+    color: var(--white);
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-center-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+.red{
+    color: var(--red) !important;
+}
+
+.test {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(162, 162, 255);
+}
+
+.highlight {
+    /* background: -webkit-linear-gradient(#eee, #333);
+    background: linear-gradient(to right, #20BDFF, #A5FECB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+
+    color: #3ED1FF;
+}
+
+.pacifico{
+    font-family: pacifico;
+    letter-spacing: 2px;
+}

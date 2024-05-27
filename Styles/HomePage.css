@@ -1,0 +1,317 @@
+.page-container {
+    width: 100vw;
+}
+
+.container {
+    width: 1440px;
+}
+
+.container h2 {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+.container p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.hero {
+    width: 1440px;
+    height: 474px;
+    padding: 112px 0;
+    margin: 120px 0;
+    position: relative;
+}
+
+.heading-container h2 {
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    text-align: center;
+    color: var(--heading-color);
+    margin-bottom: 45px;
+}
+
+.hero p {
+    width: 913px;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.hero img {
+    position: absolute;
+    z-index: -1;
+    top: -40px;
+}
+
+.notes-container {
+    padding: 60px 80px;
+    gap: 130px;
+}
+
+.notes-details {
+    width: 486px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.notes-details button {
+    margin-top: 24px;
+}
+
+.quiz-container {
+    padding: 90px 120px;
+    gap: 100px;
+}
+
+.card-detail-container {
+    padding: 90px 120px;
+    gap: 36px;
+    position: relative;
+    background-color: var(--heading-color);
+    overflow-x: hidden;
+}
+
+.student-heading-container h2 {
+    margin-bottom: 8px !important;
+    color: var(--white);
+}
+
+.card-container {
+    padding: 32px 52px 0;
+    gap: 36px;
+    z-index: 99;
+}
+
+.card {
+    border-radius: 6px;
+    width: 341px;
+    height: 300px;
+    background-color: var(--bg-color2);
+}
+
+.card .detail {
+    padding: 32px 24px 52px;
+    height: 244px;
+}
+
+.card .detail h3 {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 12px;
+    color: var(--heading-color);
+}
+
+.card .detail p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.card .follow {
+    color: var(--heading-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-top: 1px dashed var(--heading-color);
+}
+
+.card .follow a {
+    text-decoration: none;
+    color: var(--heading-color);
+}
+
+.card-detail-container img {
+    position: absolute;
+    bottom: 0;
+}
+
+.highlevel {
+    z-index: 99;
+}
+
+
+
+
+.teacher-section {
+    padding: 180px 120px;
+    gap: 46px;
+}
+
+.teacher-heading-container {
+    padding: 0 220px;
+    text-align: center;
+}
+
+.teacher-heading-container h2 {
+    margin-bottom: 12px;
+
+}
+
+.teacher-signup {
+    gap: 80px;
+
+}
+
+.teacher-signup div {
+    align-items: flex-start;
+    gap: 12px;
+    width: 486px;
+}
+
+
+
+
+
+
+
+@media (max-width:768px) {
+    .container {
+        width: 100vw;
+    }
+
+    .container h2 {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 600;
+        color: var(--heading-color);
+        margin-bottom: 12px;
+    }
+
+    .container p {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 500;
+        color: var(--text-color);
+    }
+
+    .hero {
+        width: 100vw;
+        height: 474px;
+        padding: 78px 28px;
+        position: relative;
+        margin: 0;
+    }
+
+    .heading-container h2 {
+        font-size: 32px;
+        line-height: 36px;
+        font-weight: 600;
+        letter-spacing: -2px;
+        text-align: center;
+        color: var(--heading-color);
+        margin-bottom: 45px;
+    }
+
+    .hero p {
+        width: inherit;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 500;
+        color: var(--text-color);
+        text-align: center;
+        padding: 0 12px;
+    }
+
+    .hero img {
+        position: absolute;
+        width: 318px;
+        top: 40px;
+    }
+
+
+
+    .notes-container {
+        flex-direction: column-reverse;
+        gap: 32px;
+    }
+
+    .notes-container img {
+        width: 295px
+    }
+
+    .notes-details {
+        padding: 0 24px;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .quiz-container {
+        flex-direction: column;
+        padding: 14px 38px;
+    }
+
+    .quiz-container img {
+        width: 264px;
+    }
+
+
+
+
+
+    .card-detail-container {
+        padding: 64px 36px;
+        gap: 18px;
+    }
+
+    .student-heading-container h2 {
+        margin-bottom: 8px !important;
+        color: var(--white);
+    }
+
+    .card-container {
+        padding: 32px 0;
+        gap: 18px;
+        z-index: 99;
+        flex-direction: column;
+    }
+
+    .card {
+        width: 320px;
+        height: 300px;
+        background-color: var(--bg-color2);
+    }
+
+
+
+    .teacher-section {
+        padding: 80px 0px;
+        gap: 18px;
+    }
+
+    .teacher-heading-container {
+        padding: 0 36px;
+        text-align: center;
+    }
+
+    .teacher-signup {
+        gap: 80px;
+        flex-direction: column;
+    }
+
+    .teacher-signup img {
+        width: 324px;
+    }
+
+    .teacher-signup div {
+        align-items: flex-start;
+        gap: 8px;
+        padding: 0 36px;
+        width: 100vw;
+    }
+}

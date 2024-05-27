@@ -1,0 +1,33 @@
+.side-panel{
+    height: 100vh;
+    height: 100svh;
+    width: 277px;
+    padding: 20px;
+    border-right: 2px solid var(--heading-color);
+}
+
+.side-panel ul{
+    gap: 12px;
+}
+
+.side-panel ul li{
+    list-style-type: none;
+    width: 100%;
+    border-radius: 15px;
+    border-bottom: 3px solid var(--heading-color);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.side-panel ul li a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.active{
+    background-color: rgba(60, 110, 113, 0.25);
+}
