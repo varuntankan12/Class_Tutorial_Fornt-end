@@ -1,0 +1,317 @@
+.dashboard-profile {
+    width: 100vw;
+}
+
+.main-profile-container {
+    width: 1440px;
+    max-width: 1440px;
+    display: flex;
+    padding: 20px 120px;
+    gap: 20px;
+}
+
+.profile-picture-container {
+    padding: 31px 18px;
+    background-color: rgba(60, 110, 113, 0.10);
+    gap: 36px;
+    border-radius: 18px;
+    border: 1px solid rgba(60, 110, 113, 0.70);
+}
+
+.profile-picture-container img {
+    height: 280px;
+    width: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: var(--heading-color);
+}
+
+.profile-name-email h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    color: var(--button-color);
+}
+
+.profile-name-email p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: var(--link-color);
+}
+
+.student-detail-container {
+    gap: 18px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.personal-details,
+.acedmic-details {
+    border-radius: 18px;
+    padding: 18px 24px;
+    background-color: rgba(60, 110, 113, 0.10);
+    border: 1px solid rgba(60, 110, 113, 0.70);
+}
+
+.personal-details,
+.acedmic-details {
+    width: inherit;
+}
+
+.personal-details-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: inherit;
+}
+
+.personal-details-heading h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    color: var(--button-color);
+}
+
+.data {
+    width: inherit;
+}
+
+.data ul li {
+    list-style-type: none;
+}
+
+.data ul {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 16px;
+}
+
+.data ul li span {
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--heading-color);
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.data ul li p {
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.acedmic-details-heading {
+    width: inherit;
+    margin-bottom: 16px;
+}
+
+.acedmic-details-heading h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    color: var(--button-color);
+}
+
+
+
+.subjects-details {
+    width: 100vw;
+    width: 100svw;
+}
+
+.main-subject-container {
+    width: 1440px;
+    max-width: 1440px;
+}
+
+.heading-container {
+    width: 100%;
+    padding: 20px 120px;
+}
+
+.heading-container h2 {
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 800;
+    color: var(--button-color);
+    font-family: "K2D", sans-serif;
+    margin-bottom: 16px;
+}
+
+.heading-container .line {
+    width: 100%;
+    padding: 0 120px;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(60, 110, 113, 0.60);
+}
+
+.subjects-container {
+    width: 100%;
+    padding: 20px 140px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 20px;
+    column-gap: 48px;
+}
+
+.subject {
+    text-decoration: none;
+    background-color: var(--button-color);
+    border-radius: 18px;
+    min-height: 170px;
+    padding: 12px 16px;
+    position: relative;
+    color: var(--white);
+}
+
+.subject h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.subject>img {
+    position: absolute;
+    bottom: 12px;
+    right: -18px;
+}
+
+.subject p {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: var(--white);
+    position: absolute;
+    bottom: 20px;
+    right: 12px;
+}
+
+@media (max-width:768px) {
+    .main-profile-container {
+        width: 100vw;
+        padding: 18px 12px;
+        gap: 16px;
+        flex-direction: column;
+    }
+
+    .profile-picture-container {
+        padding: 20px 14px;
+        gap: 24px;
+    }
+
+    .profile-picture-container img {
+        height: 180px;
+        width: 180px;
+    }
+
+    .profile-name-email h2 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+
+    .profile-name-email p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .student-detail-container {
+        gap: 18px;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .personal-details,
+    .acedmic-details {
+        border-radius: 18px;
+        padding: 12px 14px;
+        width: inherit;
+    }
+
+    .personal-details-heading .button{
+        margin: 0;
+    }
+
+    .personal-details-heading h3 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        color: var(--button-color);
+    }
+
+    .data ul {
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 14px;
+        padding: 6px 8px;
+    }
+
+    .data ul li span {
+        font-size: 14px;
+    }
+
+    .acedmic-details-heading h3 {
+        font-size: 16px;
+    }
+
+    .subjects-details {
+        width: 100vw;
+        width: 100svw;
+    }
+
+    .main-subject-container {
+        width: 100vw;
+    }
+
+    .heading-container {
+        width: 100%;
+        padding: 20px 14px;
+    }
+
+    .heading-container h2 {
+        font-size: 28px;
+        line-height: 36px;
+        font-weight: 800;
+        margin-bottom: 12px;
+    }
+
+    .heading-container .line {
+        width: 100%;
+        padding: 0 14px;
+    }
+
+    .subjects-container {
+        width: 100%;
+        padding: 20px 28px;
+        grid-template-columns: auto;
+        row-gap: 16px;
+    }
+
+    .subject {
+        background-color: var(--button-color);
+        border-radius: 18px;
+        min-height: 150px;
+    }
+
+    .subject h2 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .subject>img {
+        width: 270px;
+    }
+
+    .subject p {
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 18px;
+        position: absolute;
+        bottom: 16px;
+        right: 12px;
+    }
+}

@@ -105,10 +105,12 @@ document.getElementById('signup-form').addEventListener('submit', function (even
         if (!isStrongdata.isValid) {
             passwordwarning.textContent = 'Weak Password.';
             passworddescription.textContent = isStrongdata.message;
+            password.style.border = '1px solid red';
             isValid = false;
         }
         else {
             passwordwarning.textContent = '';
+            password.style.border = 'none';
         }
     }
 
@@ -124,11 +126,13 @@ document.getElementById('signup-form').addEventListener('submit', function (even
         const isStrongdata = strongPassword(confirmpasswordValue);
         if (!isStrongdata.isValid) {
             confirmpasswordwarning.textContent = 'Weak Password.';
+            confirmpassword.style.border = '1px solid red';
             passworddescription.textContent = isStrongdata.message;
             isValid = false;
         }
         else {
             confirmpasswordwarning.textContent = '';
+            confirmpassword.style.border = 'none';
         }
     }
 
@@ -158,7 +162,7 @@ document.getElementById('signup-form').addEventListener('submit', function (even
     }
 });
 
-const createPasswordVisibilityBtn = document.getElementById('view_hide_btn_crt').addEventListener('click', () => {
+const createPasswordVisibilityBtn = document.getElementById('view_hide_btn_crt').addEventListener('click', function () {
     const passwordField = document.getElementById('create_password_input');
     if (passwordField.type === 'password') {
         passwordField.type = 'text';
@@ -168,7 +172,7 @@ const createPasswordVisibilityBtn = document.getElementById('view_hide_btn_crt')
         this.src = 'assets/eye.svg';
     }
 });
-const confirmPasswordVisibilityBtn = document.getElementById('view_hide_btn_cnfrm').addEventListener('click', () => {
+const confirmPasswordVisibilityBtn = document.getElementById('view_hide_btn_cnfrm').addEventListener('click', function () {
     const passwordField = document.getElementById('confirm_password_input');
     if (passwordField.type === 'password') {
         passwordField.type = 'text';

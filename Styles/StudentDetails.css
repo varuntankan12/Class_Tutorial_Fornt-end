@@ -1,0 +1,231 @@
+.container {
+    position: relative;
+}
+
+.enter-student-details {
+    width: 100vw;
+    backdrop-filter: blur(4px);
+    padding: 80px 0;
+}
+
+.form {
+    width: 900px;
+    background-color: rgba(60, 110, 113, 0.25);
+    border: 2px solid var(--white);
+    border-radius: 18px;
+    padding: 32px;
+    backdrop-filter: blur(12px);
+}
+
+.form-heading-container {
+    padding: 0 32px;
+}
+
+.form-heading-container h2 {
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 600;
+    color: var(--heading-color);
+
+}
+
+.form .tag {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 600;
+    color: var(--white);
+    padding: 12px 16px;
+    margin: 16px 0;
+    border-bottom: 3px solid var(--heading-color);
+    border-radius: 12px;
+    align-self: flex-start;
+}
+
+.input-field-container {
+    width: 100%;
+    gap: 20px;
+}
+
+.data-container {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.disabled {
+    background-color: var(--button-color) !important;
+}
+
+#mobile_field {
+    position: relative;
+}
+
+.region {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    z-index: 99;
+    color: var(--white);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.mobile-number {
+    padding-left: 56px !important;
+}
+
+.mobile-number::-webkit-inner-spin-button {
+    display: none;
+}
+
+.gender-container {
+    width: inherit;
+    color: var(--heading-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    position: relative;
+}
+
+.select-gender {
+    width: inherit;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--heading-color);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    padding: 12px 32px;
+    color: var(--white);
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.select-gender label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.select-gender input[type="radio"] {
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    display: grid;
+    place-content: center;
+    background-color: transparent;
+    border: 3px solid var(--text-color);
+    border-radius: 50%;
+}
+
+.select-gender input[type="radio"]::before {
+    content: "";
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    transform: scale(0);
+    background-color: var(--button-color);
+    transition: 120ms transform ease-in-out;
+}
+
+.select-gender input[type="radio"]:checked {
+    border: 3px solid var(--button-color);
+}
+
+.select-gender input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+input[type='number']::-webkit-inner-spin-button {
+    display: none;
+}
+
+
+@media (max-width:768px) {
+
+    .enter-student-details {
+        padding: 12px;
+    }
+
+    .form {
+        width: 100vw;
+        padding: 12px;
+    }
+
+    .form-heading-container {
+        padding: 0 6px;
+    }
+
+    .form-heading-container h2 {
+        font-size: 22px;
+        line-height: 28px;
+
+    }
+
+    .form .tag {
+        font-size: 16px;
+        line-height: 18px;
+        color: var(--white);
+        padding: 8px 12px;
+    }
+
+    .input-field-container {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .data-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .region {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .gender-container {
+        width: inherit;
+        color: var(--heading-color);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        position: relative;
+    }
+
+    .select-gender {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 400;
+        padding: 12px 12px;
+    }
+
+    .select-gender label {
+        gap: 6px;
+    }
+
+    .select-gender input[type="radio"] {
+        appearance: none;
+        height: 16px;
+        width: 16px;
+        border: 3px solid var(--text-color);
+    }
+
+    .select-gender input[type="radio"]::before {
+        content: "";
+        height: 8px;
+        width: 8px;
+    }
+
+    .select-gender input[type="radio"]:checked {
+        border: 3px solid var(--button-color);
+    }
+
+    .select-gender input[type="radio"]:checked::before {
+        transform: scale(1);
+    }
+}

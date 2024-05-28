@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | ClassTutorials</title>
+    <link rel="stylesheet" href="Styles/Common.css">
+    <link rel="stylesheet" href="Styles/Navbar.css">
+    <link rel="stylesheet" href="Styles/Footer.css">
+    <link rel="stylesheet" href="Styles/StudentDashboard.css">
+    <link rel="stylesheet" href="Styles/Button.css">
+    <link rel="stylesheet" href="Styles/StudentDetails.css">
+    <link rel="stylesheet" href="Styles/InputStyle.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="/index.html" class="link"><img src="assets/Class_tutorials.png" alt="logo" class="logo"></a>
+
+                <div class="nav-content flex-center">
+                    <div class="nav-list" id="navlist">
+                        <a href="/index.html" class="link">Home</a>
+                        <a href="#" class="link">About</a>
+                        <a href="#" class="link">Community</a>
+                        <a href="#" class="link">Dashboard</a>
+                    </div>
+                    <div class="nav-profile flex-center">
+                        <img src="assets/Hamburger_icon.svg" alt="hamburger" class="hamburger hidden" id="hamburger">
+                        <div class="profile-image" id="profile">
+                            <img src="assets/profile.svg" alt="profile" class="profile">
+                        </div>
+                    </div>
+                    <!-- <a href="#" class="link" style="color: #9BD6FF;">Login/Sign-up</a> -->
+                    <div class="profile-details flex-center hidden" id="profile_details">
+                        <a href="#" class="link">Dashboard</a>
+                        <a href="#" class="link">Log-out</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="enter-student-details flex-center">
+            <form action="/studentdashboard.html" class="form flex-center-column" id="student-details-form">
+                <div class="form-heading-container">
+                    <h2>Before moving forward add your <span class="white">Personal Details</span> and <span class="white">Academic details.</span></h2>
+                </div>
+                <p class="tag">Personal Details</p>
+                <div class="input-field-container flex-center-column">
+                    <div class="data-container">
+                        <label for="name_input" class="input-field" id="name_field">
+                            Full Name <span class="red">*</span><br>
+                            <input type="text" disabled class="input disabled" value="Sandeep Kumar" id="name_input" placeholder="your name">
+                            <p id="name_warning" class="red"></p>
+                        </label>
+                        <label for="father_name_input" class="input-field" id="father_name_field">
+                            Father's Name <span class="red">*</span><br>
+                            <input type="email" class="input" id="father_name_input" placeholder="Enter Father's Name">
+                            <p id="father_name_warning" class="red"></p>
+                        </label>
+                    </div>
+                    <div class="data-container">
+                        <label for="mobile_input" class="input-field" id="mobile_field">
+                            Mobile Number <span class="red">*</span><br>
+                            <input type="number" class="input mobile-number" id="mobile_input" placeholder="Enter Mobile Number">
+                            <p id="mobile_warning" class="red"></p>
+                            <p class="region" id="region">+91 |</p>
+                        </label>
+                        <label for="dob_input" class="input-field" id="dob_field">
+                            Date of Birth <span class="red">*</span><br>
+                            <input type="text" class="input" id="dob_input" placeholder="Enter Date of Birth">
+                            <p id="dob_warning" class="red"></p>
+                        </label>
+                    </div>
+                    <div class="data-container">
+                        <div class="gender-container">
+                            <p>Gender <span class="red">*</span></p>
+                            <div class="select-gender">
+                                <label for="male" id="male_label"><input type="radio" id="male" name="gender"
+                                        value="male" checked>
+                                    Male</label>
+                                <label for="female" id="female_label"><input type="radio" id="female" name="gender"
+                                        value="female">
+                                    Female</label>
+                                <label for="other" id="other_label"><input type="radio" id="other" name="gender"
+                                        value="other">
+                                    Other</label>
+                            </div>
+                        </div>
+                        <label for="about_input" class="input-field" id="about_field">
+                            About <br>
+                            <input type="text" class="input" id="about_input" placeholder="Enter Bio  Details">
+                        </label>
+                    </div>
+                    <label for="address_input" class="input-field" id="address_field">
+                        Address <span class="red">*</span><br>
+                        <input type="text" class="input" id="address_input" placeholder="Enter Address">
+                        <p id="address_warning" class="red"></p>
+                    </label>
+                </div>
+                <p class="tag">Academic Details</p>
+                <div class="input-field-container flex-center-column">
+                    <div class="data-container">
+                        <label for="select_course" class="input-field">
+                            Select Course <span class="red">*</span><br>
+                            <select name="course" id="select_course" class="select-course">
+                                <option value="">Select Course</option>
+                                <option value="btech">B. tech</option>
+                                <option value="bca">BCA</option>
+                            </select>
+                            <p id="select_course_warning" class="red"></p>
+                        </label>
+                        <label for="select_branch" class="input-field">
+                            Select Branch <span class="red">*</span><br>
+                            <select name="branch" id="select_branch" class="select-Branch">
+                                <option value="">Select Branch</option>
+                                <option value="cse">Computer Science and Engineering</option>
+                                <option value="me">Machenical</option>
+                                <option value="ee">Electrical Engineering</option>
+                            </select>
+                            <p id="select_branch_warning" class="red"></p>
+                        </label>
+                    </div>
+                    <div class="data-container">
+                        <label for="select_semester" class="input-field">
+                            Select Semester <span class="red">*</span><br>
+                            <select name="semester" id="select_semester" class="select-semester">
+                                <option value="">Select Semester</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                            <p id="select_semester_warning" class="red"></p>
+                        </label>
+                        <label for="roll_no_input" class="input-field" id="roll_no_field">
+                            Roll No <span class="red">*</span><br>
+                            <input type="number" class="input" id="roll_no_input" placeholder="Enter Roll No">
+                            <p id="roll_no_warning" class="red"></p>
+                        </label>
+                    </div>
+                </div>
+                <button class="button save-button flex-center" type="submit">Save</button>
+                <p class="backend-failure red">wrong username and password</p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-level-1">
+            <div class="level-1-container">
+                <img src="assets/footer_logo.png" alt="footer logo image" class="footer-img">
+                <div class="footer-content">
+                    <div class="footer-content-div">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Notes</a></li>
+                            <li><a href="#">Assignments</a></li>
+                            <li><a href="#">Quizzes</a></li>
+                            <li><a href="#">Code Challenges</a></li>
+                            <li><a href="#">Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-div">
+                        <h3>Community</h3>
+                        <ul>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Chapters</a></li>
+                            <li><a href="#">Events</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-div">
+                        <h3>Solutions</h3>
+                        <ul>
+                            <li><a href="#">Learning Solution</a></li>
+                            <li><a href="#">Carrier Development</a></li>
+                            <li><a href="#">Upskilling</a></li>
+                            <li><a href="#">Networking</a></li>
+                            <li><a href="#">Knowledge Development</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-div">
+                        <h3>Career Building</h3>
+                        <ul>
+                            <li><a href="#">Career Path</a></li>
+                            <li><a href="#">Career Services</a></li>
+                            <li><a href="#">Interview Prep</a></li>
+                        </ul>
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-level-2">
+            <div class="level-2-container">
+                <p>
+                    Copyright © LastClass. All Rights Reserved
+                </p>
+                <div class="social-media-links">
+                    <a href="#"><img src="assets/facebook_icon.svg" alt="facebook"></a>
+                    <a href="#"><img src="assets/Google_icon.svg" alt="Google"></a>
+                    <a href="#"><img src="assets/Twitter_icon.svg" alt="twitter"></a>
+                    <a href="#"><img src="assets/Youtube_icon.svg" alt="youtube"></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="Scripts/navbar.js"></script>
+    <script src="Scripts/"></script>
+    <script src="Scripts/StudentDetails.js"></script>
+</body>
+
+</html>

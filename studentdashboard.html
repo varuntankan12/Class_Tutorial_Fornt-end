@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | ClassTutorials</title>
+    <link rel="stylesheet" href="Styles/Common.css">
+    <link rel="stylesheet" href="Styles/Navbar.css">
+    <link rel="stylesheet" href="Styles/Footer.css">
+    <link rel="stylesheet" href="Styles/StudentDashboard.css">
+    <link rel="stylesheet" href="Styles/Button.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="/index.html" class="link"><img src="assets/Class_tutorials.png" alt="logo" class="logo"></a>
+
+                <div class="nav-content flex-center">
+                    <div class="nav-list" id="navlist">
+                        <a href="/index.html" class="link">Home</a>
+                        <a href="#" class="link">About</a>
+                        <a href="#" class="link">Community</a>
+                        <a href="#" class="link">Dashboard</a>
+                    </div>
+                    <div class="nav-profile flex-center">
+                        <img src="assets/Hamburger_icon.svg" alt="hamburger" class="hamburger hidden" id="hamburger">
+                        <div class="profile-image" id="profile">
+                            <img src="assets/profile.svg" alt="profile" class="profile">
+                        </div>
+                    </div>
+                    <!-- <a href="#" class="link" style="color: #9BD6FF;">Login/Sign-up</a> -->
+                    <div class="profile-details flex-center hidden" id="profile_details">
+                        <a href="#" class="link">Dashboard</a>
+                        <a href="#" class="link">Log-out</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard-profile flex-center">
+            <div class="main-profile-container">
+                <div class="profile-picture-container flex-center-column">
+                    <img src="assets/ForgetPasswordBG.svg" alt="profile">
+                    <div class="profile-name-email flex-center-column">
+                        <h2>Sandeep Kumar</h2>
+                        <p>sandeepkumar@gmail.com</p>
+                    </div>
+                </div>
+                <div class="student-detail-container flex-center-column">
+                    <div class="personal-details flex-center-column">
+                        <div class=" personal-details-heading">
+                            <h3>Personal Details</h3>
+                            <button class="edit button">
+                                <img src="assets/EditIcon.svg" alt="edit"> <span>Edit</span>
+                            </button>
+                        </div>
+                        <div class="data">
+                            <ul>
+                                <li>
+                                    <span>First Name</span>
+                                    <p>--------</p>
+                                </li>
+                                <li>
+                                    <span>Last name</span>
+                                    <p>--------</p>
+                                </li>
+                                <li>
+                                    <span>Date of Birth</span>
+                                    <p>--/--/----</p>
+                                </li>
+                                <li>
+                                    <span>Phone Number</span>
+                                    <p>--------</p>
+                                </li>
+                                <li>
+                                    <span>Father's name</span>
+                                    <p>-------</p>
+                                </li>
+                                <li>
+                                    <span>Address</span>
+                                    <p>----- - - --------- -- -----</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="acedmic-details">
+                        <div class="acedmic-details-heading">
+                            <h3>Acedmic Details</h3>
+                        </div>
+                        <div class="data">
+                            <ul>
+                                <li>
+                                    <span>Course</span>
+                                    <p>-------</p>
+                                </li>
+                                <li>
+                                    <span>Branch</span>
+                                    <p>-------------</p>
+                                </li>
+                                <li>
+                                    <span>Semester</span>
+                                    <p>--</p>
+                                </li>
+                                <li>
+                                    <span>Roll No.</span>
+                                    <p>---------</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><br><br>
+        <section class="subjects-details flex-center-column">
+            <div class="main-subject-container">
+                <div class="heading-container">
+                    <h2>Enrolled Subjects</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="subjects-container">
+                    <a  href="/studentnotes.html" class="subject">
+                        <h2>Data Structures and Algorithems</h2>
+                        <img src="assets/SubjectsLable.svg" alt="label">
+                        <p>visit-></p>
+                    </a>
+                    <a href="/studentnotes.html" class="subject">
+                        <h2>Data Structures and Algorithems</h2>
+                        <img src="assets/SubjectsLable.svg" alt="label">
+                        <p>visit-></p>
+                    </a>
+                    <a href="/studentnotes.html" class="subject">
+                        <h2>Data Structures and Algorithems</h2>
+                        <img src="assets/SubjectsLable.svg" alt="label">
+                        <p>visit-></p>
+                    </a>
+                    <a href="/studentnotes.html" class="subject">
+                        <h2>Data Structures and Algorithems</h2>
+                        <img src="assets/SubjectsLable.svg" alt="label">
+                        <p>visit-></p>
+                    </a>
+                    <a href="/studentnotes.html" class="subject">
+                        <h2>Data Structures and Algorithems</h2>
+                        <img src="assets/SubjectsLable.svg" alt="label">
+                        <p>visit-></p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-level-1">
+            <div class="level-1-container">
+                <img src="assets/footer_logo.png" alt="footer logo image" class="footer-img">
+                <div class="footer-content">
+                    <div class="footer-content-div">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Notes</a></li>
+                            <li><a href="#">Assignments</a></li>
+                            <li><a href="#">Quizzes</a></li>
+                            <li><a href="#">Code Challenges</a></li>
+                            <li><a href="#">Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-div">
+                        <h3>Community</h3>
+                        <ul>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Chapters</a></li>
+                            <li><a href="#">Events</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-div">
+                        <h3>Solutions</h3>
+                        <ul>
+                            <li><a href="#">Learning Solution</a></li>
+                            <li><a href="#">Carrier Development</a></li>
+                            <li><a href="#">Upskilling</a></li>
+                            <li><a href="#">Networking</a></li>
+                            <li><a href="#">Knowledge Development</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-div">
+                        <h3>Career Building</h3>
+                        <ul>
+                            <li><a href="#">Career Path</a></li>
+                            <li><a href="#">Career Services</a></li>
+                            <li><a href="#">Interview Prep</a></li>
+                        </ul>
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-level-2">
+            <div class="level-2-container">
+                <p>
+                    Copyright © LastClass. All Rights Reserved
+                </p>
+                <div class="social-media-links">
+                    <a href="#"><img src="assets/facebook_icon.svg" alt="facebook"></a>
+                    <a href="#"><img src="assets/Google_icon.svg" alt="Google"></a>
+                    <a href="#"><img src="assets/Twitter_icon.svg" alt="twitter"></a>
+                    <a href="#"><img src="assets/Youtube_icon.svg" alt="youtube"></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="Scripts/navbar.js"></script>
+    <script src="Scripts/"></script>
+</body>
+
+</html>
