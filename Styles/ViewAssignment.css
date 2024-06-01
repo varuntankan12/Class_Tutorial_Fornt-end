@@ -1,0 +1,18 @@
+.right-wrong-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-wrong-container .right {
+    background-image: url(/assets/Right.svg);
+    background-repeat: no-repeat;
+    height: 28px;
+    width: 28px;
+}
+
+.right-wrong-container .wrong {
+    background-image: url(/assets/Wrong.svg);
+    background-repeat: no-repeat;
+    height: 28px;
+    width: 28px;
+}

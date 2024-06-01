@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz | ClassTutorials</title>
+    <title>Assignments | ClassTutorials</title>
     <link rel="stylesheet" href="Styles/Common.css">
     <link rel="stylesheet" href="Styles/Navbar.css">
     <link rel="stylesheet" href="Styles/Footer.css">
     <link rel="stylesheet" href="Styles/Button.css">
-    <link rel="stylesheet" href="Styles/StudentQuiz.css">
+    <link rel="stylesheet" href="Styles/AssignmentPage.css">
+    <link rel="stylesheet" href="Styles/ViewAssignment.css">
 </head>
 
 <body>
@@ -53,73 +54,36 @@
                 </div>
             </div>
         </section><br><br>
-        <section class="notes-details flex-center">
-            <div class="main-notes-container">
-                <div class="heading-container">
-                    <div class="flex-center">
-                        <a href="/studentnotes.html">Notes</a>
-                        <a href="/studentquiz.html">Quizzes</a>
-                        <a href="/studentassignment.html">Assignments</a>
-                    </div>
-                    <div class="line"></div>
-                    <div class="navigation-arrow"><img src="assets/DoubleDownArrow.svg" alt="arrow"></div>
 
+
+        <section class="assignment-details flex-center-column prevent-select">
+            <div class="main-assignment-container flex-center-column">
+                <div class="heading-container">
+                    <p>Unit-Assignment / Data Structures - Tree</p><!-- yaha pe assignment ka naam aayega -->
+                    <div class="line"></div>
                 </div>
-                <div class="notes-container">
-                    <!-- load this content dynamically using loop and do not Fu** up the class names -->
-                    <div class="note">
-                        <p class="date">17-july-2024</p><!-- this is the date on which quiz is to be held -->
-                        <p>Unit-6 Data Structures - Graphs</p>
-                        <div class="buttons-container">
-                            <button class="button">
-                                <!-- only start the quiz on the day it assigned. --><!--Onclick navigate to quizpage.html-->
-                                <span>start</span> <!-- show start if not attempted or date not exceeded -->
-                                <img src="assets/Arrow.svg" alt="arrow">
-                            </button>
+                <div class="questions-container" id="questions_container">
+                    <!-- <div class="question">
+                        <div class="question-data" id="answer_field_1"><label for="answer_input_1"
+                                class="input-field"><span>1.</span>
+                                <p>When was "Luigi's Mansion 3" released?</p>
+                            </label>
+                            <div>
+                                <textarea id="answer_input_1" placeholder="Enter Your Answer."></textarea>
+                                <div class="right-wrong-container">
+                                    <p><span id="word_count_of_1">0</span>/<span id="total_word_count_of_1">150</span></p>
+                                    <p class="wrong"></p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="note">
-                        <p class="date">17-july-2024</p>
-                        <p>Unit-6 Data Structures - Graphs</p>
-                        <div class="buttons-container">
-                            <button class="button"><!--onclick navigate to viewquizpage.html-->
-                                <span>view</span><!-- show view if attempted or date exceeded -->
-                                <img src="assets/Arrow.svg" alt="arrow">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="note">
-                        <p class="date">17-july-2024</p>
-                        <p>Unit-6 Data Structures - Graphs</p>
-                        <div class="buttons-container">
-                            <button class="button">
-                                <span>start</span>
-                                <img src="assets/Arrow.svg" alt="arrow">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="note">
-                        <p class="date">17-july-2024</p>
-                        <p>Unit-6 Data Structures - Graphs</p>
-                        <div class="buttons-container">
-                            <button class="button">
-                                <span>start</span>
-                                <img src="assets/Arrow.svg" alt="arrow">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="note">
-                        <p class="date">17-july-2024</p>
-                        <p>Unit-6 Data Structures - Graphs</p>
-                        <div class="buttons-container">
-                            <button class="button">
-                                <span>start</span>
-                                <img src="assets/Arrow.svg" alt="arrow">
-                            </button>
-                        </div>
-                    </div>
+                        <div class="line"></div>
+                    </div> -->
                 </div>
             </div>
+            <form action="/studentassignment.html" id="form" class="form">
+                <textarea name="assignment_answer" class="hidden-imp" id="answer_of_student"></textarea>
+                <button class="button" type="submit">Submit</button>
+            </form>
         </section>
     </main>
 
@@ -187,17 +151,86 @@
 
     </footer>
 
-    <script src="Scripts/navbar.js"></script>
-    <script>
-        document.querySelectorAll(".button").forEach((elem,index)=>{
-            elem.addEventListener("click",function(event){
-                event.preventDefault();
-                if(window.outerWidth < 780){
-                    alert("you cant Perform Quiz on this Device, Please use a Laptop or Desktop.")
+    <script id="assignment_data_container">
+        const studentAssignmentData = {
+            "total_questions": 10,
+            "questions": [
+                {
+                    "question": "When was &quot;Luigi&#039;s Mansion 3&quot; released?",
+                    "min_words": "150",
+                    "max_words": "500",
+                    "student_answer": "this is my answer",
+                    "status": "right",
+                },
+                {
+                    "question": "In what Homestuck Update was [S] Game Over released?",
+                    "min_words": "150",
+                    "max_words": "500",
+                    "student_answer": "",
+                    "status": "right",
+                },
+                {
+                    "question": "Liam Howlett founded which electronic music group in 1990?",
+                    "min_words": "150",
+                    "max_words": "500",
+                    "student_answer": "",
+                    "status": "right",
+                },
+                {
+                    "question": "Which famous 90&#039;s rap album is commonly referred to as &quot;The Bible of Hip Hop&quot;?",
+                    "min_words": "150",
+                    "max_words": "500",
+                    "student_answer": "",
+                    "status": "right",
+                },
+                {
+                    "question": "How many bytes are in a single Kibibyte?",
+                    "min_words": "150",
+                    "max_words": "500",
+                    "student_answer": "",
+                    "status": "right",
+                },
+                {
+                    "question": "What was the name of Ross&#039; pet monkey on &quot;Friends&quot;?",
+                    "min_words": "150",
+                    "max_words": "500",
+                    "student_answer": "",
+                    "status": "right",
+                },
+                {
+                    "question": "In &quot;My Little Pony: Friendship is Magic&quot;, which of these ponies represents the quality of honesty?",
+                    "min_words": "150",
+                    "max_words": "500",
+                    "student_answer": "",
+                    "status": "right",
+                },
+                {
+                    "question": "Donald Trump won the popular vote in the 2016 United States presidential election.",
+                    "min_words": "150",
+                    "max_words": "500",
+                    "student_answer": "",
+                    "status": "right",
+                },
+                {
+                    "question": "In Dota 2, Wraith King was previously known as...",
+                    "min_words": "150",
+                    "max_words": "500",
+                    "student_answer": "",
+                    "status": "right",
+                },
+                {
+                    "question": "What is the collective noun for vultures?",
+                    "min_words": "150",
+                    "max_words": "500",
+                    "student_answer": "",
+                    "status": "right",
                 }
-            });
-        });
+            ]
+        }
+
     </script>
+    <script src="Scripts/viewAssignment.js"></script>
+    <script src="Scripts/navbar.js"></script>
 </body>
 
 </html>

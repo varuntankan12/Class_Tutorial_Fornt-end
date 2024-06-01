@@ -1,0 +1,249 @@
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.navbar {
+    height: 55px !important;
+}
+
+.nav-content p {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.main-quiz-container {
+    width: 100vw;
+    display: flex;
+}
+
+.question-container {
+    padding: 64px;
+    min-height: 95vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+}
+
+.marks{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    color: var(--heading-color);
+    text-align: end;
+    padding: 0 18px;
+}
+
+.question {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    color: var(--text-color);
+    padding: 0 0 60px 0;
+}
+
+.question span {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+
+}
+
+.question p {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.options {
+    padding: 0 54px;
+    width: 100%;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.options button {
+    display: flex;
+    align-items: center;
+    width: 640px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(60, 110, 113, 0.10);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    padding: 12px 35px;
+    color: var(--text-color);
+    margin-top: 8px;
+    text-align: left;
+    transition: all 0.3s;
+}
+
+.options button:hover{
+    cursor: pointer;
+    background-color: rgba(60, 110, 113, 0.25);
+}
+
+.radio {
+    height: 20px;
+    width: 20px;
+    margin-right: 27px;
+    display: grid;
+    place-content: center;
+    background-color: transparent;
+    border: 3px solid var(--text-color);
+    border-radius: 50%;
+}
+
+.radio::before {
+    content: "";
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    transform: scale(0);
+    background-color: var(--button-color);
+    transition: 120ms transform ease-in-out;
+}
+
+.checked {
+    border: 3px solid var(--button-color) !important;
+}
+
+.checked:before {
+    transform: scale(1);
+}
+
+.navigation-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 120px;
+}
+
+.navigation-buttons-container span {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    color: var(--link-color);
+    cursor: pointer;
+    border-bottom: 2px solid var(--link-color);
+}
+
+.navigate-buttons {
+    display: flex;
+    gap: 24px;
+}
+
+.button {
+    margin: 0;
+    background-color: var(--heading-color) !important;
+}
+
+.constraint-container {
+    width: 380px;
+    background-color: var(--white);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.time {
+    width: 100%;
+    padding: 12px 0;
+}
+
+.time p {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 700;
+    color: var(--button-color);
+}
+
+.total-question-container {
+    width: 100%;
+    max-height: 380px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 24px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.total-question-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.total-question-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.total-question-container::-webkit-scrollbar-thumb {
+    background: rgba(33, 85, 59, 0.412);
+    border-radius: 4px;
+}
+
+.question-number {
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: var(--heading-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.choosed {
+    background-color: var(--button-color) !important;
+    color: var(--bg-color2);
+}
+
+.submit-button {
+    width: 100%;
+    background-color: var(--button-color) !important;
+    color: var(--white) !important;
+}
+
+.warning-container,
+.fullscreen-modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.warning-card {
+    width: 320px;
+    min-height: 180px;
+    background-color: rgba(60, 110, 113, 0.75);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+}
+
+.warning-card p {
+    color: var(--white);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    text-align: center;
+}

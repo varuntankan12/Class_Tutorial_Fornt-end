@@ -32,6 +32,10 @@
     opacity: 60%;
 }
 
+.input[type="date"]::-webkit-calendar-picker-indicator {
+    background-image: url('/assets/CalerderIcon.svg');
+}
+
 .input-field select {
     appearance: none;
     -webkit-appearance: none;

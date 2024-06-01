@@ -1,0 +1,383 @@
+.container {
+    position: relative;
+}
+
+.enter-student-details {
+    width: 100vw;
+    backdrop-filter: blur(4px);
+    padding: 80px 0;
+}
+
+.form {
+    width: 900px;
+    background-color: rgba(60, 110, 113, 0.25);
+    border: 2px solid var(--white);
+    border-radius: 18px;
+    padding: 32px;
+    backdrop-filter: blur(12px);
+}
+
+.form-heading-container {
+    padding: 0 32px;
+    width: 100%;
+}
+
+.form-heading-container h2 {
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 600;
+    color: var(--heading-color);
+
+}
+
+.profile-picture {
+    width: 100%;
+}
+
+.cont {
+    height: 280px;
+    width: 280px;
+    margin: 24px 0;
+    position: relative;
+}
+
+.cont>img {
+    border-radius: 50%;
+    height: 280px;
+    width: 280px;
+    background-color: var(--heading-color);
+    object-fit: cover;
+}
+
+.cont .buttons-container {
+    position: absolute;
+    right: -114px;
+    bottom: 104px;
+}
+
+.edit {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: var(--button-color);
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+    cursor: pointer;
+}
+
+.edit .img {
+    height: 24px;
+    width: 24px;
+}
+
+.buttons-container {
+    width: 197px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border-radius: 12px;
+    background-color: rgb(122, 169, 171);
+    position: relative;
+}
+
+.buttons-container::before {
+    content: '';
+    height: 32px;
+    width: 32px;
+    background-color: inherit;
+    position: absolute;
+    bottom: -15px;
+    left: 20px;
+    transform: rotate(45deg);
+}
+
+.buttons-container span {
+    padding: 4px 35px;
+    margin: 0;
+    z-index: 99;
+}
+
+.buttons-container>span {
+    background-color: var(--heading-color);
+}
+
+.image-input {
+    display: none;
+}
+
+.form .tag {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 600;
+    color: var(--white);
+    padding: 12px 16px;
+    margin: 16px 0;
+    border-bottom: 3px solid var(--heading-color);
+    border-radius: 12px;
+    align-self: flex-start;
+}
+
+.input-field-container {
+    width: 100%;
+    gap: 20px;
+}
+
+.data-container {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.disabled {
+    background-color: var(--button-color) !important;
+}
+
+#mobile_field {
+    position: relative;
+}
+
+.region {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    z-index: 99;
+    color: var(--white);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.mobile-number {
+    padding-left: 56px !important;
+}
+
+.mobile-number::-webkit-inner-spin-button {
+    display: none;
+}
+
+.gender-container {
+    width: inherit;
+    color: var(--heading-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    position: relative;
+}
+
+.select-gender {
+    width: inherit;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--heading-color);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    padding: 12px 32px;
+    color: var(--white);
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.select-gender label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.select-gender input[type="radio"] {
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    display: grid;
+    place-content: center;
+    background-color: transparent;
+    border: 3px solid var(--text-color);
+    border-radius: 50%;
+}
+
+.select-gender input[type="radio"]::before {
+    content: "";
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    transform: scale(0);
+    background-color: var(--button-color);
+    transition: 120ms transform ease-in-out;
+}
+
+.select-gender input[type="radio"]:checked {
+    border: 3px solid var(--button-color);
+}
+
+.select-gender input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+input[type='number']::-webkit-inner-spin-button {
+    display: none;
+}
+
+
+@media (max-width:768px) {
+
+    .enter-student-details {
+        padding: 12px;
+    }
+
+    .form {
+        width: 100vw;
+        padding: 12px;
+    }
+
+    .form-heading-container {
+        padding: 0 6px;
+    }
+
+    .form-heading-container h2 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .profile-picture {
+        width: 100%;
+    }
+
+    .cont {
+        height: 180px;
+        width: 180px;
+    }
+
+    .cont>img {
+        border-radius: 50%;
+        height: 180px;
+        width: 180px;
+    }
+
+    .cont .buttons-container {
+        position: absolute;
+        right: -74px;
+        bottom: 76px;
+    }
+
+    .edit {
+        height: 42px;
+        width: 42px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        background-color: var(--button-color);
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    .edit .img {
+        height: 18px;
+        width: 18px;
+    }
+
+    .buttons-container {
+        width: 140px;
+        height: 70px;
+        gap: 4px;
+    }
+
+    .buttons-container::before {
+        content: '';
+        height: 32px;
+        width: 32px;
+        background-color: inherit;
+        position: absolute;
+        bottom: -15px;
+        left: 20px;
+        transform: rotate(45deg);
+    }
+
+    .buttons-container span {
+        padding: 2px 24px;
+        margin: 0;
+        z-index: 99;
+        font-size: 14px;
+    }
+
+    .buttons-container>span {
+        background-color: var(--heading-color);
+    }
+
+    .image-input {
+        display: none;
+    }
+
+    .form .tag {
+        font-size: 16px;
+        line-height: 18px;
+        color: var(--white);
+        padding: 8px 12px;
+    }
+
+    .input-field-container {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .data-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .region {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .gender-container {
+        width: inherit;
+        color: var(--heading-color);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        position: relative;
+    }
+
+    .select-gender {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 400;
+        padding: 12px 12px;
+    }
+
+    .select-gender label {
+        gap: 6px;
+    }
+
+    .select-gender input[type="radio"] {
+        appearance: none;
+        height: 16px;
+        width: 16px;
+        border: 3px solid var(--text-color);
+    }
+
+    .select-gender input[type="radio"]::before {
+        content: "";
+        height: 8px;
+        width: 8px;
+    }
+
+    .select-gender input[type="radio"]:checked {
+        border: 3px solid var(--button-color);
+    }
+
+    .select-gender input[type="radio"]:checked::before {
+        transform: scale(1);
+    }
+}

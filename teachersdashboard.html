@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz | ClassTutorials</title>
+    <title>Dashboard | ClassTutorials</title>
     <link rel="stylesheet" href="Styles/Common.css">
     <link rel="stylesheet" href="Styles/Navbar.css">
     <link rel="stylesheet" href="Styles/Footer.css">
+    <link rel="stylesheet" href="Styles/TeacherDashboard.css">
     <link rel="stylesheet" href="Styles/Button.css">
-    <link rel="stylesheet" href="Styles/StudentQuiz.css">
+
 </head>
 
 <body>
@@ -42,82 +43,86 @@
     </header>
 
     <main>
-        <section class="flex-center">
-            <div class="subject-details-container">
-                <div class="flex-center">
-                    <div class="subject-name-container flex-center-column">
-                        <h2>Data Structures and Algorithem</h2>
-                        <p>-by <span>Sandeep Maheshwari</span></p>
+        <section class="dashboard-profile flex-center">
+            <div class="main-profile-container">
+                <div class="profile-picture-container flex-center-column">
+                    <!-- if gender is male the show profilePreviewMale.svg else if gender is female then show ProfilePreviedFemale.svg -->
+                    <img src="assets/ProfilePreviewMale.svg" alt="profile">
+                    <div class="profile-name-email flex-center-column">
+                        <h2>Sandeep Kumar</h2>
+                        <p>sandeepkumar@gmail.com</p>
                     </div>
-                    <img src="assets/SubjectPageBG.svg" alt="subject">
+                </div>
+                <div class="teacher-detail-container">
+                    <div class="personal-details flex-center-column">
+                        <div class=" personal-details-heading">
+                            <h3>Personal Details</h3>
+                            <button class="edit button">
+                                <img src="assets/EditIcon.svg" alt="edit"> <span>Edit</span>
+                            </button>
+                        </div>
+                        <div class="data">
+                            <ul>
+                                <li>
+                                    <span>First Name</span>
+                                    <p>--------</p>
+                                </li>
+                                <li>
+                                    <span>Last name</span>
+                                    <p>--------</p>
+                                </li>
+                                <li>
+                                    <span>Contact Number</span>
+                                    <p>-- ---- ----</p>
+                                </li>
+                                <li>
+                                    <span>Position</span>
+                                    <p>--------</p>
+                                </li>
+                                <li>
+                                    <span>Course</span>
+                                    <p>-------</p>
+                                </li>
+                                <li>
+                                    <span>Department</span>
+                                    <p>----- - - -----p>
+                                </li>
+                                <li>
+                                    <span>MainSubject</span>
+                                    <p>----- - - --------- -- -----</p>
+                                </li>
+                                <li>
+                                    <span>Total Subjects</span>
+                                    <p>4</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section><br><br>
-        <section class="notes-details flex-center">
-            <div class="main-notes-container">
+        <section class="subjects-details flex-center-column">
+            <div class="main-subject-container">
                 <div class="heading-container">
-                    <div class="flex-center">
-                        <a href="/studentnotes.html">Notes</a>
-                        <a href="/studentquiz.html">Quizzes</a>
-                        <a href="/studentassignment.html">Assignments</a>
-                    </div>
+                    <h2>Enrolled Subjects</h2>
                     <div class="line"></div>
-                    <div class="navigation-arrow"><img src="assets/DoubleDownArrow.svg" alt="arrow"></div>
-
                 </div>
-                <div class="notes-container">
-                    <!-- load this content dynamically using loop and do not Fu** up the class names -->
-                    <div class="note">
-                        <p class="date">17-july-2024</p><!-- this is the date on which quiz is to be held -->
-                        <p>Unit-6 Data Structures - Graphs</p>
-                        <div class="buttons-container">
-                            <button class="button">
-                                <!-- only start the quiz on the day it assigned. --><!--Onclick navigate to quizpage.html-->
-                                <span>start</span> <!-- show start if not attempted or date not exceeded -->
-                                <img src="assets/Arrow.svg" alt="arrow">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="note">
-                        <p class="date">17-july-2024</p>
-                        <p>Unit-6 Data Structures - Graphs</p>
-                        <div class="buttons-container">
-                            <button class="button"><!--onclick navigate to viewquizpage.html-->
-                                <span>view</span><!-- show view if attempted or date exceeded -->
-                                <img src="assets/Arrow.svg" alt="arrow">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="note">
-                        <p class="date">17-july-2024</p>
-                        <p>Unit-6 Data Structures - Graphs</p>
-                        <div class="buttons-container">
-                            <button class="button">
-                                <span>start</span>
-                                <img src="assets/Arrow.svg" alt="arrow">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="note">
-                        <p class="date">17-july-2024</p>
-                        <p>Unit-6 Data Structures - Graphs</p>
-                        <div class="buttons-container">
-                            <button class="button">
-                                <span>start</span>
-                                <img src="assets/Arrow.svg" alt="arrow">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="note">
-                        <p class="date">17-july-2024</p>
-                        <p>Unit-6 Data Structures - Graphs</p>
-                        <div class="buttons-container">
-                            <button class="button">
-                                <span>start</span>
-                                <img src="assets/Arrow.svg" alt="arrow">
-                            </button>
-                        </div>
-                    </div>
+                <div class="subjects-container">
+                    <a href="/studentnotes.html" class="subject">
+                        <h2>Data Structures and Algorithems</h2>
+                        <img src="assets/SubjectsLable.svg" alt="label">
+                        <p>visit-></p>
+                    </a>
+                    <a href="/studentnotes.html" class="subject">
+                        <h2>Data Structures and Algorithems</h2>
+                        <img src="assets/SubjectsLable.svg" alt="label">
+                        <p>visit-></p>
+                    </a>
+                    <a href="/studentnotes.html" class="subject">
+                        <h2>Data Structures and Algorithems</h2>
+                        <img src="assets/SubjectsLable.svg" alt="label">
+                        <p>visit-></p>
+                    </a>
                 </div>
             </div>
         </section>
@@ -188,16 +193,7 @@
     </footer>
 
     <script src="Scripts/navbar.js"></script>
-    <script>
-        document.querySelectorAll(".button").forEach((elem,index)=>{
-            elem.addEventListener("click",function(event){
-                event.preventDefault();
-                if(window.outerWidth < 780){
-                    alert("you cant Perform Quiz on this Device, Please use a Laptop or Desktop.")
-                }
-            });
-        });
-    </script>
+    <script src="Scripts/"></script>
 </body>
 
 </html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | ClassTutorials</title>
+    <link rel="stylesheet" href="Styles/Navbar.css">
+    <link rel="stylesheet" href="Styles/Common.css">
+    <link rel="stylesheet" href="Styles/Button.css">
+    <link rel="stylesheet" href="Styles/QuizPage.css">
+</head>
+<!-- This page is for teachers only -->
+
+<body id="quiz-container">
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="nav-content flex-center">
+                    <p>Unit-Test / Data Structures - Graphs</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="flex-center prevent-select">
+        <div class="main-quiz-container">
+            <div class="question-container">
+                <div>
+                    <p class="marks"><span id="marks">2</span> Points</p>
+                    <div class="question">
+                        <span id="ques_num">Q.1</span>
+                        <p id="question_text"></p>
+                    </div>
+                    <div class="options flex-center-column" id="options_container"></div>
+                </div>
+                <div class="navigation-buttons-container">
+                    <span id="clear">clear</span>
+                    <div class="navigate-buttons">
+                        <button class="button flex-center" id="prev">Prev</button>
+                        <button class="button flex-center" id="next">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div class="constraint-container">
+                <div>
+                    <div class="time">
+                        <p>Remaining Time:</p>
+                        <p><span id="hour">00</span>:<span id="min">00</span>:<span id="sec">00</span></p>
+                    </div>
+                    <div class="total-question-container" id="total_questions_container"></div>
+                </div>
+                <form action="/studentquiz.html" id="quiz_form" method="get">
+                    <textarea name="quiz_answer" id="answer" class="hidden-imp"></textarea>
+                    <button class="button submit-button flex-center" type="submit" id="finish">Finish</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="warning-container hidden-imp" id="warning_container">
+        <div class="warning-card">
+            <p class="warning" id="warning">This is Not Allowed.</p>
+            <button class="button" id="exit">Ok</button>
+        </div>
+    </div>
+
+    <script id="quiz_data_container">
+        const timeLimit = "20"; //limit should be in minute.
+        const answer_mode = "student";
+        const quizData = `{
+                "total_questions": 10,
+                "questions": [
+                    {
+                        "question": "When was &quot;Luigi&#039;s Mansion 3&quot; released?",
+                        "correct_answer": "October 31st, 2019",
+                        "options": [
+                            "October 31st, 2019",
+                            "January 13th, 2019",
+                            "September 6th, 2018",
+                            "October 1st, 2019"
+                        ],
+                        "student_answer": "October 1st, 2019",
+                        "marks":"2"
+                    },
+                    {
+                        "question": "In what Homestuck Update was [S] Game Over released?",
+                        "correct_answer": "October 25th, 2014",
+                        "options": [
+                            "October 25th, 2014",
+                            "April 13th, 2009",
+                            "April 8th, 2012",
+                            "August 28th, 2003"
+                        ],
+                        "student_answer": "October 25th, 2014",
+                        "marks":"2"
+                    },
+                    {
+                        "question": "Liam Howlett founded which electronic music group in 1990?",
+                        "correct_answer": "The Prodigy",
+                        "options": [
+                            "The Prodigy",
+                            "The Chemical Brothers",
+                            "The Crystal Method",
+                            "Infected Mushroom"
+                        ],
+                        "student_answer": "The Prodigy",
+                        "marks":"4"
+                    },
+                    {
+                        "question": "Which famous 90&#039;s rap album is commonly referred to as &quot;The Bible of Hip Hop&quot;?",
+                        "correct_answer": "Illmatic",
+                        "options": [
+                            "Illmatic",
+                            "The Low End Theory",
+                            "The Chronic",
+                            "Enter The Wu-Tang (36 Chambers)"
+                        ],
+                        "student_answer": "Illmatic",
+                        "marks":"2"
+                    },
+                    {
+                        "question": "How many bytes are in a single Kibibyte?",
+                        "correct_answer": "1024",
+                        "options": [
+                            "1024",
+                            "2400",
+                            "1000",
+                            "1240"
+                        ],
+                        "student_answer": "1024",
+                        "marks":"2"
+                    },
+                    {
+                        "question": "What was the name of Ross&#039; pet monkey on &quot;Friends&quot;?",
+                        "correct_answer": "Marcel",
+                        "options": [
+                            "Marcel",
+                            "Jojo",
+                            "George",
+                            "Champ"
+                        ],
+                        "student_answer": "Champ",
+                        "marks":"2"
+                    },
+                    {
+                        "question": "In &quot;My Little Pony: Friendship is Magic&quot;, which of these ponies represents the quality of honesty?",
+                        "correct_answer": "Applejack",
+                        "options": [
+                            "Applejack",
+                            "Twilight Sparkle",
+                            "Pinkie Pie",
+                            "Rarity"
+                        ],
+                        "student_answer": "Applejack",
+                        "marks":"2"
+                    },
+                    {
+                        "question": "Donald Trump won the popular vote in the 2016 United States presidential election.",
+                        "correct_answer": "False",
+                        "options": [
+                            "False",
+                            "True"
+                        ],
+                        "student_answer": "True",
+                        "marks":"2"
+                    },
+                    {
+                        "question": "In Dota 2, Wraith King was previously known as...",
+                        "correct_answer": "Skeleton King",
+                        "options": [
+                            "Skeleton King",
+                            "Reaper King",
+                            "Skull King",
+                            "Hell King"
+                        ],
+                        "student_answer": "Hell King",
+                        "marks":"2"
+                    },
+                    {
+                        "question": "What is the collective noun for vultures?",
+                        "correct_answer": "Wake",
+                        "options": [
+                            "Wake",
+                            "Ambush",
+                            "Building",
+                            "Gaze"
+                        ],
+                        "student_answer": "Building",
+                        "marks":"2"
+                    }
+                ]
+            }
+            `;
+    </script>
+    
+    <script src="Scripts/AnswerQuizPage.js"></script>
+    <script src="Scripts/ScreenRestriction.js"></script>
+</body>
+
+</html>

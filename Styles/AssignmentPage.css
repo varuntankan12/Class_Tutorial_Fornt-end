@@ -1,0 +1,239 @@
+.subject-details-container {
+    width: 1440px;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 120px;
+}
+
+.subject-details-container>div {
+    width: 100%;
+    padding: 30px 80px;
+    justify-content: space-between;
+}
+
+.subject-name-container h2 {
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 700;
+    font-family: "Inknut Antiqua", serif;
+    color: var(--heading-color);
+    margin-bottom: 12px;
+}
+
+.subject-name-container p {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.assignment-details {
+    width: 100vw;
+    width: 100svw;
+}
+
+.main-assignment-container {
+    width: 1440px;
+    max-width: 1440px;
+}
+
+.heading-container {
+    width: 100%;
+    padding: 20px 120px;
+    position: relative;
+}
+
+.heading-container p {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    color: var(--button-color);
+    text-decoration: none;
+    padding: 12px 64px;
+}
+
+.line {
+    width: 100%;
+    padding: 0 120px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--button-color);
+}
+
+.questions-container {
+    width: 100%;
+    padding: 20px 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.question-data label {
+    width: 100%;
+    display: flex;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+
+.question-data p,
+span {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.question-data div {
+    width: 100%;
+    padding: 0 32px;
+}
+
+.question-data div textarea {
+    width: 100%;
+    min-height: 200px;
+    resize: vertical;
+    border-radius: 8px;
+    background-color: rgba(60, 110, 113, 0.10);
+    padding: 26px 28px;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    box-shadow: inset 0 0 6px rgba(60, 110, 113, 0.32);
+}
+
+.question-data div textarea::placeholder {
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.question-data div textarea:focus {
+    outline: none;
+    border: none;
+}
+
+.question .line {
+    margin: 14px 0;
+}
+
+.form {
+    width: 1440px;
+    padding: 20px 280px;
+    display: flex;
+    margin-bottom: 80px;
+    justify-content: flex-end;
+}
+
+.form button {
+    margin: 0;
+}
+
+.hidden-imp {
+    display: none;
+}
+
+@media (max-width:768px) {
+    .subject-details-container {
+        width: 100vw;
+        padding: 20px 12px;
+    }
+
+    .subject-details-container>div {
+        width: 100%;
+        padding: 16px 0;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subject-name-container h2 {
+        font-size: 26px;
+        line-height: 32px;
+        font-weight: 700;
+    }
+
+    .subject-name-container p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .subject-details-container img {
+        width: 280px;
+    }
+
+    .main-assignment-container {
+        width: 100%;
+    }
+
+    .heading-container {
+        width: 100%;
+        padding: 20px 12px;
+        position: relative;
+    }
+
+    .heading-container p {
+        font-size: 18px;
+        line-height: 24px;
+        padding: 0 6px;
+    }
+
+    .line {
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    .questions-container {
+        width: 100%;
+        padding: 20px 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .question-data label {
+        width: 100%;
+        display: flex;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    .question-data p,
+    span {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 500;
+        color: var(--text-color);
+    }
+
+    .question-data div {
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    .question-data div textarea {
+        width: 100%;
+        min-height: 180px;
+        padding: 14px 18px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .question-data div textarea:focus {
+        outline: none;
+        border: none;
+    }
+
+    .question .line {
+        margin: 14px 0;
+    }
+
+    .form {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        margin-bottom: 80px;
+        justify-content: center;
+    }
+}

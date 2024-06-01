@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz | ClassTutorials</title>
+    <title>Notes | ClassTutorials</title>
     <link rel="stylesheet" href="Styles/Common.css">
     <link rel="stylesheet" href="Styles/Navbar.css">
     <link rel="stylesheet" href="Styles/Footer.css">
     <link rel="stylesheet" href="Styles/Button.css">
-    <link rel="stylesheet" href="Styles/StudentQuiz.css">
+    <link rel="stylesheet" href="Styles/InputStyle.css">
+    <link rel="stylesheet" href="Styles/TeacherNotes.css">
 </head>
 
 <body>
@@ -41,7 +42,7 @@
         </nav>
     </header>
 
-    <main>
+    <main style="position: relative;">
         <section class="flex-center">
             <div class="subject-details-container">
                 <div class="flex-center">
@@ -57,68 +58,99 @@
             <div class="main-notes-container">
                 <div class="heading-container">
                     <div class="flex-center">
-                        <a href="/studentnotes.html">Notes</a>
-                        <a href="/studentquiz.html">Quizzes</a>
-                        <a href="/studentassignment.html">Assignments</a>
+                        <a href="/teachernotes.html">Notes</a>
+                        <a href="/teacherquiz.html">Quizzes</a>
+                        <a href="/teacherassignment.html">Assignments</a>
                     </div>
                     <div class="line"></div>
                     <div class="navigation-arrow"><img src="assets/DoubleDownArrow.svg" alt="arrow"></div>
-
+                </div>
+                <div class="create-button-container">
+                    <button class="button upload-button" id="upload_new"><img src="assets/AddIcon.svg" alt="add"> Upload New</button>
                 </div>
                 <div class="notes-container">
-                    <!-- load this content dynamically using loop and do not Fu** up the class names -->
                     <div class="note">
-                        <p class="date">17-july-2024</p><!-- this is the date on which quiz is to be held -->
-                        <p>Unit-6 Data Structures - Graphs</p>
+                        <!-- filename = Unit 6 Data Structures -->
+                        <!-- topic = Graphs -->
+                        <p>Unit 6 Data Structures - Graphs</p>
                         <div class="buttons-container">
-                            <button class="button">
-                                <!-- only start the quiz on the day it assigned. --><!--Onclick navigate to quizpage.html-->
-                                <span>start</span> <!-- show start if not attempted or date not exceeded -->
+                            <a href=""><img src="/assets/DownloadLogo.svg" alt="download"></a>
+                            <button class="delete-button"><img src="assets/DeleteIcon.svg" alt="del"></button>
+                            <button class="button change-button">
+                                <span>Change</span>
                                 <img src="assets/Arrow.svg" alt="arrow">
                             </button>
                         </div>
                     </div>
                     <div class="note">
-                        <p class="date">17-july-2024</p>
-                        <p>Unit-6 Data Structures - Graphs</p>
+                        <!-- filename = Unit 6 Data Structures -->
+                        <!-- topic = Graphs -->
+                        <p>Unit 6 Data Structures - Graphs</p>
                         <div class="buttons-container">
-                            <button class="button"><!--onclick navigate to viewquizpage.html-->
-                                <span>view</span><!-- show view if attempted or date exceeded -->
+                            <a href=""><img src="/assets/DownloadLogo.svg" alt="download"></a>
+                            <button class="delete-button"><img src="assets/DeleteIcon.svg" alt="del"></button>
+                            <button class="button change-button">
+                                <span>Change</span>
                                 <img src="assets/Arrow.svg" alt="arrow">
                             </button>
                         </div>
                     </div>
                     <div class="note">
-                        <p class="date">17-july-2024</p>
-                        <p>Unit-6 Data Structures - Graphs</p>
+                        <!-- filename = Unit 6 Data Structures -->
+                        <!-- topic = Graphs -->
+                        <p>Unit 6 Data Structures - Graphs</p>
                         <div class="buttons-container">
-                            <button class="button">
-                                <span>start</span>
+                            <a href=""><img src="/assets/DownloadLogo.svg" alt="download"></a>
+                            <button class="delete-button"><img src="assets/DeleteIcon.svg" alt="del"></button>
+                            <button class="button change-button">
+                                <span>Change</span>
                                 <img src="assets/Arrow.svg" alt="arrow">
                             </button>
                         </div>
                     </div>
                     <div class="note">
-                        <p class="date">17-july-2024</p>
-                        <p>Unit-6 Data Structures - Graphs</p>
+                        <!-- filename = Unit 6 Data Structures -->
+                        <!-- topic = Graphs -->
+                        <p>Unit 6 Data Structures - Graphs</p>
                         <div class="buttons-container">
-                            <button class="button">
-                                <span>start</span>
-                                <img src="assets/Arrow.svg" alt="arrow">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="note">
-                        <p class="date">17-july-2024</p>
-                        <p>Unit-6 Data Structures - Graphs</p>
-                        <div class="buttons-container">
-                            <button class="button">
-                                <span>start</span>
+                            <a href=""><img src="/assets/DownloadLogo.svg" alt="download"></a>
+                            <button class="delete-button"><img src="assets/DeleteIcon.svg" alt="del"></button>
+                            <button class="button change-button">
+                                <span>Change</span>
                                 <img src="assets/Arrow.svg" alt="arrow">
                             </button>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="form-container flex-center hidden-imp" id="form_container">
+            <div class="main-form-container flex-center">
+                <form action="/teachernotes.html" class="form flex-center-column" id="upload-notes-form">
+                    <h2>Add New Notes</h2>
+                    <div class="input-field-container flex-center-column">
+                        <label for="file_input" class="drop-zone">
+                            <div class="circle">
+                                <img src="assets/UploadFileLogo.svg" alt="upload">
+                            </div>
+                            <span class="drop-zone__prompt">Drag and Drop a file or Click to Upload. <span class="red">*</span><br>Max 12MB</span>
+                            <input type="file" name="NotesFile" class="drop-zone__input" id="file_input">
+                        </label>
+                        <p id="file_input_warning" class="red"></p>
+                        <label for="file_name" class="input-field">
+                            File Name <span class="red">*</span><br>
+                            <input type="text" class="input" id="file_name" placeholder="Enter File Name">
+                            <p id="file_name_warning" class="red"></p>
+                        </label>
+                        <label for="topic_name" class="input-field">
+                            Topic Name <span class="red">*</span><br>
+                            <input type="text" class="input password-field" id="topic_name" placeholder="Enter Topic Coverd in File.">
+                            <p id="topic_name_warning" class="red"></p>
+                        </label>
+                    </div>
+                    <button class="button upload-notes-button flex-center" type="submit">Upload</button>
+                    <p class="backend-failure red">can't upload now</p>
+                </form>
             </div>
         </section>
     </main>
@@ -188,16 +220,7 @@
     </footer>
 
     <script src="Scripts/navbar.js"></script>
-    <script>
-        document.querySelectorAll(".button").forEach((elem,index)=>{
-            elem.addEventListener("click",function(event){
-                event.preventDefault();
-                if(window.outerWidth < 780){
-                    alert("you cant Perform Quiz on this Device, Please use a Laptop or Desktop.")
-                }
-            });
-        });
-    </script>
+    <script src="Scripts/TeacherNotes.js"></script>
 </body>
 
 </html>

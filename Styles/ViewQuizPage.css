@@ -1,0 +1,32 @@
+.total-marks-container{
+    display: flex;
+    width: 100%;
+    padding: 14px;
+    gap: 36px;
+    margin: 18px 0;
+}
+
+.total-marks-container p{
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #164743;
+}
+
+.right {
+    background-color: rgba(0, 128, 0, 0.25) !important;
+}
+
+.wrong {
+    background-color: rgba(255, 0, 0, 0.25) !important;
+}
+
+.end{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--link-color);
+}
+
+.options button p:last-of-type {
+    margin-left: auto;
+}

@@ -52,6 +52,14 @@ body {
     display: none;
 }
 
+.hidden-imp{
+    display: none !important;
+}
+
+.prevent-select{
+    user-select: none;
+}
+
 .red{
     color: var(--red) !important;
 }
