@@ -110,7 +110,12 @@
 
 
                 <form action="/teacherassignment.html" id="quiz_submit_form" class="final-submit-form">
-                    <label for="last_date_of_assignment" class="input-field" id="dob_field">
+                    <label for="assignment_name" class="input-field">
+                        Assignment Name <span class="red">*</span><br>
+                        <input type="text" class="input" id="assignment_name" placeholder="Enter Name of Assignment">
+                        <p id="assignment_name_warning" class="red"></p>
+                    </label>
+                    <label for="last_date_of_assignment" class="input-field">
                         Last Submission date <span class="red">*</span><br>
                         <input type="date" class="input" id="last_date_of_assignment"
                             placeholder="Enter Date of submission">

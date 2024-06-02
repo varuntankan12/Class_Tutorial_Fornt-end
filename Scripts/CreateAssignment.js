@@ -125,9 +125,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('quiz_submit_form').addEventListener('submit', function (event) {
         event.preventDefault();
+        const assignmentName = document.getElementById('assignment_name');
+        const assignmentNameWarning = document.getElementById('assignment_name_warning');
         const lastDateOfAssignment = document.getElementById('last_date_of_assignment');
         const lastDateOfAssignmentWarning = document.getElementById('last_date_of_assignment_warning');
         let valid = true;
+
+        if (assignmentName.value.trim() == '') {
+            assignmentNameWarning.textContent = "Date Required."
+            valid = false;
+        } else {
+            assignmentNameWarning.textContent = '';
+        }
 
         if (lastDateOfAssignment.value.trim() == '') {
             lastDateOfAssignmentWarning.textContent = "Date Required."

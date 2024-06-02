@@ -136,6 +136,11 @@
                     </div>
                 </form>
                 <form action="/teacherquiz.html" id="quiz_submit_form" class="final-submit-form">
+                    <label for="quiz_name" class="input-field">
+                        Quiz Name <span class="red">*</span><br>
+                        <input type="text" class="input" id="quiz_name" placeholder="Enter Quiz Name">
+                        <p id="quiz_name_warning" class="red"></p>
+                    </label>
                     <label for="time_limit" class="input-field">
                         Time Constraint <span class="red">*</span><br>
                         <input type="number" class="input mark-input" id="time_limit"

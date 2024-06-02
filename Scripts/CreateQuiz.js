@@ -210,11 +210,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('quiz_submit_form').addEventListener('submit', function (event) {
         event.preventDefault();
+        const quizName = document.getElementById('quiz_name');
+        const quizNameWarning = document.getElementById('quiz_name_warning');
         const timeLimit = document.getElementById('time_limit');
         const timeLimitWarning = document.getElementById('time_limit_warning');
         const dateOfQuiz = document.getElementById('date_of_quiz');
         const dateOfQuizWarning = document.getElementById('date_of_quiz_warning');
         let valid = true;
+
+        if (quizName.value.trim() == '') {
+            quizNameWarning.textContent = "Quiz Name Required."
+            valid = false;
+        } else {
+            quizNameWarning.textContent = '';
+        }
 
         if (timeLimit.value.trim() == '') {
             timeLimitWarning.textContent = "time Required."
