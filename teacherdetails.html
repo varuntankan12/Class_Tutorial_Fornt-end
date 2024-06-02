@@ -44,38 +44,34 @@
 
     <main class="container">
         <section class="enter-student-details flex-center">
-            <form action="/studentdashboard.html" class="form flex-center-column" id="student-details-form">
+            <form action="/teachersdashboard.html" class="form flex-center-column" id="teacher-details-form">
                 <div class="form-heading-container">
-                    <h2>Before moving forward add your <span class="white">Personal Details</span> and <span class="white">Academic details.</span></h2>
+                    <h2>Before moving forward add your <span class="white">Personal Details</span> and <span
+                            class="white">Academic details.</span></h2>
                 </div>
                 <p class="tag">Personal Details</p>
                 <div class="input-field-container flex-center-column">
                     <div class="data-container">
                         <label for="name_input" class="input-field" id="name_field">
                             Full Name <span class="red">*</span><br>
-                            <input type="text" disabled class="input disabled" value="Sandeep Kumar" id="name_input" placeholder="your name">
+                            <input type="text" disabled class="input disabled" value="Sandeep Kumar" id="name_input"
+                                placeholder="your name">
                             <p id="name_warning" class="red"></p>
                         </label>
-                        <label for="father_name_input" class="input-field" id="father_name_field">
-                            Father's Name <span class="red">*</span><br>
-                            <input type="email" class="input" id="father_name_input" placeholder="Enter Father's Name">
-                            <p id="father_name_warning" class="red"></p>
-                        </label>
-                    </div>
-                    <div class="data-container">
                         <label for="mobile_input" class="input-field" id="mobile_field">
                             Mobile Number <span class="red">*</span><br>
-                            <input type="number" class="input mobile-number" id="mobile_input" placeholder="Enter Mobile Number">
+                            <input type="number" class="input mobile-number" id="mobile_input"
+                                placeholder="Enter Mobile Number">
                             <p id="mobile_warning" class="red"></p>
                             <p class="region" id="region">+91 |</p>
                         </label>
-                        <label for="dob_input" class="input-field" id="dob_field">
-                            Date of Birth <span class="red">*</span><br>
-                            <input type="date" class="input" id="dob_input" placeholder="Enter Date of Birth">
-                            <p id="dob_warning" class="red"></p>
-                        </label>
                     </div>
                     <div class="data-container">
+                        <label for="position_input" class="input-field" id="name_field">
+                            Position <span class="red">*</span><br>
+                            <input type="text" class="input" id="position_input" placeholder="Position name">
+                            <p id="position_warning" class="red"></p>
+                        </label>
                         <div class="gender-container">
                             <p>Gender <span class="red">*</span></p>
                             <div class="select-gender">
@@ -90,16 +86,7 @@
                                     Other</label>
                             </div>
                         </div>
-                        <label for="about_input" class="input-field" id="about_field">
-                            About <br>
-                            <input type="text" class="input" id="about_input" placeholder="Enter Bio  Details">
-                        </label>
                     </div>
-                    <label for="address_input" class="input-field" id="address_field">
-                        Address <span class="red">*</span><br>
-                        <input type="text" class="input" id="address_input" placeholder="Enter Address">
-                        <p id="address_warning" class="red"></p>
-                    </label>
                 </div>
                 <p class="tag">Academic Details</p>
                 <div class="input-field-container flex-center-column">
@@ -114,9 +101,9 @@
                             <p id="select_course_warning" class="red"></p>
                         </label>
                         <label for="select_branch" class="input-field">
-                            Select Branch <span class="red">*</span><br>
+                            Select Department <span class="red">*</span><br>
                             <select name="branch" id="select_branch" class="select-Branch">
-                                <option value="">Select Branch</option>
+                                <option value="">Select Department</option><!-- load branches of course -->
                                 <option value="cse">Computer Science and Engineering</option>
                                 <option value="me">Machenical</option>
                                 <option value="ee">Electrical Engineering</option>
@@ -125,21 +112,15 @@
                         </label>
                     </div>
                     <div class="data-container">
-                        <label for="select_semester" class="input-field">
-                            Select Semester <span class="red">*</span><br>
-                            <select name="semester" id="select_semester" class="select-semester">
-                                <option value="">Select Semester</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
+                        <label for="select_main_subject" class="input-field">
+                            Select Main Subject <span class="red">*</span><br>
+                            <select name="semester" id="select_main_subject" class="select-semester">
+                                <option value="">Select Subject</option><!-- load all subject of that teacher -->
+                                <option value="dsa">Data Structure and Algorithms</option>
+                                <option value="os">Operating Systems</option>
+                                <option value="dbms">Database Management Systems</option>
                             </select>
-                            <p id="select_semester_warning" class="red"></p>
-                        </label>
-                        <label for="roll_no_input" class="input-field" id="roll_no_field">
-                            Roll No <span class="red">*</span><br>
-                            <input type="number" class="input" id="roll_no_input" placeholder="Enter Roll No">
-                            <p id="roll_no_warning" class="red"></p>
+                            <p id="select_main_subject_warning" class="red"></p>
                         </label>
                     </div>
                 </div>
@@ -214,7 +195,7 @@
     </footer>
 
     <script src="Scripts/navbar.js"></script>
-    <script src="Scripts/StudentDetails.js"></script>
+    <script src="Scripts/TeacherDetails.js"></script>
 </body>
 
 </html>

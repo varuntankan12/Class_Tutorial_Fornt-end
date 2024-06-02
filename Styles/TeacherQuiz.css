@@ -1,0 +1,238 @@
+.subject-details-container {
+    width: 1440px;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 120px;
+}
+
+.subject-details-container>div {
+    width: 100%;
+    padding: 30px 80px;
+    justify-content: space-between;
+}
+
+.subject-name-container h2 {
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 700;
+    font-family: "Inknut Antiqua", serif;
+    color: var(--heading-color);
+    margin-bottom: 12px;
+}
+
+.subject-name-container p {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.quiz-details {
+    width: 100vw;
+    width: 100svw;
+}
+
+.main-quiz-container {
+    width: 1440px;
+    max-width: 1440px;
+}
+
+.heading-container {
+    width: 100%;
+    padding: 20px 120px;
+    position: relative;
+}
+
+.heading-container a {
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 800;
+    color: var(--button-color);
+    font-family: "K2D", sans-serif;
+    text-decoration: none;
+    padding: 0 32px;
+}
+
+.heading-container div {
+    margin-bottom: 16px;
+    justify-content: space-between;
+}
+
+.heading-container .navigation-arrow {
+    position: absolute;
+    left: 635px;
+    bottom: 4px;
+    margin: 0;
+    padding: 0;
+    z-index: 99;
+}
+
+.heading-container .navigation-arrow:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 29px;
+    width: 48px;
+    background-color: var(--bg-color);
+    top: -6px;
+    left: 2px;
+    z-index: -1;
+}
+
+.heading-container .line {
+    width: 100%;
+    padding: 0 120px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--button-color);
+}
+
+.create-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 24px 160px;
+}
+
+.create-button-container a {
+    text-decoration: none;
+}
+
+.quiz-container {
+    width: 100%;
+    padding: 20px 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quiz {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(60, 110, 113, 0.10);
+    border-radius: 12px;
+    padding: 8px 60px;
+}
+
+.quiz p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.quiz .buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.buttons-container button {
+    margin: 0;
+}
+
+@media (max-width:768px) {
+    .subject-details-container {
+        width: 100vw;
+        padding: 20px 12px;
+    }
+
+    .subject-details-container>div {
+        width: 100%;
+        padding: 16px 0;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subject-name-container h2 {
+        font-size: 26px;
+        line-height: 32px;
+        font-weight: 700;
+    }
+
+    .subject-name-container p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .subject-details-container img {
+        width: 280px;
+    }
+
+    .main-quiz-container {
+        width: 100%;
+    }
+
+    .heading-container {
+        width: 100%;
+        padding: 20px 12px;
+        position: relative;
+    }
+
+    .heading-container>div {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .heading-container a {
+        font-size: 24px;
+        line-height: 28px;
+        padding: 0 18px;
+    }
+
+    .heading-container .navigation-arrow {
+        position: absolute;
+        left: 120px;
+    }
+
+    .heading-container .line {
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    .create-button-container {
+        padding: 18px 12px;
+    }
+
+    .quiz-container {
+        width: 100%;
+        padding: 20px 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .quiz {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 8px 6px;
+        gap: 12px;
+    }
+
+    .quiz p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .quiz .buttons-container {
+        gap: 16px;
+    }
+
+    .buttons-container button {
+        margin: 0;
+    }
+
+    .buttons-container a img {
+        width: 28px;
+    }
+
+    .date {
+        color: var(--heading-color);
+    }
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateQuiz | ClassTutorials</title>
+    <link rel="stylesheet" href="Styles/Common.css">
+    <link rel="stylesheet" href="Styles/Navbar.css">
+    <link rel="stylesheet" href="Styles/Footer.css">
+    <link rel="stylesheet" href="Styles/Button.css">
+    <link rel="stylesheet" href="Styles/CreateQuiz.css">
+    <link rel="stylesheet" href="Styles/InputStyle.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="/index.html" class="link"><img src="assets/Class_tutorials.png" alt="logo" class="logo"></a>
+
+                <div class="nav-content flex-center">
+                    <div class="nav-list" id="navlist">
+                        <a href="/index.html" class="link">Home</a>
+                        <a href="#" class="link">About</a>
+                        <a href="#" class="link">Community</a>
+                        <a href="#" class="link">Dashboard</a>
+                    </div>
+                    <div class="nav-profile flex-center">
+                        <img src="assets/Hamburger_icon.svg" alt="hamburger" class="hamburger hidden" id="hamburger">
+                        <div class="profile-image" id="profile">
+                            <img src="assets/profile.svg" alt="profile" class="profile">
+                        </div>
+                    </div>
+                    <!-- <a href="#" class="link" style="color: #9BD6FF;">Login/Sign-up</a> -->
+                    <div class="profile-details flex-center hidden" id="profile_details">
+                        <a href="#" class="link">Dashboard</a>
+                        <a href="#" class="link">Log-out</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="container-full flex-center">
+            <div class="main-content-container">
+                <h2>Create New Quiz</h2>
+                <div class="total-questions-container" id="total_question_container">
+                    <!-- <div class="question-container">
+                        <div class="question">
+                            <div class="question-data">
+                                <div>
+                                    <span id="ques_no_1">1.</span>
+                                    <p id="question_content_of_1">The most efficient algorithm for finding the number of
+                                        connected
+                                        components in an
+                                        undirected graph on n vertices and m
+                                        edges has time complexity.</p>
+                                    <span id="marks_of_1" class="marks-count">4_marks</span>
+                                </div>
+                                <ol type="i">
+                                    <li id="option_1_of_ques_1">Theta(n)</li>
+                                    <li id="option_2_of_ques_1">Theta(m)</li>
+                                    <li id="option_3_of_ques_1">Theta(n+m)</li>
+                                    <li id="option_4_of_ques_1">Theta(nm)</li>
+                                </ol>
+                            </div>
+                            <div class="edit-buttons flex-center-column">
+                                <button id="edit_btn_of_ques_1">
+                                    <svg width="29" height="30" viewBox="0 0 29 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14 3.66797H4.66667C3.95942 3.66797 3.28115 3.94892 2.78105 4.44902C2.28095 4.94911 2 5.62739 2 6.33464V25.0013C2 25.7085 2.28095 26.3868 2.78105 26.8869C3.28115 27.387 3.95942 27.668 4.66667 27.668H23.3333C24.0406 27.668 24.7189 27.387 25.219 26.8869C25.719 26.3868 26 25.7085 26 25.0013V15.668"
+                                            stroke="white" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M22.4998 3.16827C23.0303 2.63784 23.7497 2.33984 24.4998 2.33984C25.25 2.33984 25.9694 2.63784 26.4998 3.16827C27.0303 3.6987 27.3283 4.41813 27.3283 5.16827C27.3283 5.91842 27.0303 6.63784 26.4998 7.16827L13.9998 19.6683L8.6665 21.0016L9.99984 15.6683L22.4998 3.16827Z"
+                                            stroke="white" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <button id="delete_btn_of_ques_1" class="delete-button">
+                                    <svg width="24" height="31" viewBox="0 0 24 31" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2.00016 27.3346C2.00016 28.2187 2.35135 29.0665 2.97647 29.6917C3.60159 30.3168 4.44944 30.668 5.3335 30.668H18.6668C19.5509 30.668 20.3987 30.3168 21.0239 29.6917C21.649 29.0665 22.0002 28.2187 22.0002 27.3346V7.33464H2.00016V27.3346ZM5.3335 10.668H18.6668V27.3346H5.3335V10.668ZM17.8335 2.33464L16.1668 0.667969H7.8335L6.16683 2.33464H0.333496V5.66797H23.6668V2.33464H17.8335Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <form class="input-form">
+                    <label for="question_input" class="question-input-field">
+                        Question <span class="red">*</span><br>
+                        <textarea id="question_input" class="input-area" placeholder="Enter Your Question"></textarea>
+                        <p id="question_input_warning" class="red"></p>
+                    </label>
+                    <div class="question-type-container">
+                        <div class="options" id="options_container">
+                            <label for="option_1" class="input-field">
+                                Option <span class="red">*</span><br>
+                                <input type="text" class="input" id="option_1" placeholder="Enter Option">
+                                <p id="option_1_warning" class="red"></p>
+                            </label>
+                            <label for="option_2" class="input-field">
+                                option <span class="red">*</span><br>
+                                <input type="text" class="input" id="option_2" placeholder="Enter Option">
+                                <p id="option_2_warning" class="red"></p>
+                            </label>
+                            <label for="option_3" class="input-field">
+                                option <span class="red">*</span><br>
+                                <input type="text" class="input" id="option_3" placeholder="Enter Option">
+                                <p id="option_3_warning" class="red"></p>
+                            </label>
+                            <label for="option_4" class="input-field">
+                                option <span class="red">*</span><br>
+                                <input type="text" class="input" id="option_4" placeholder="Enter Option">
+                                <p id="option_4_warning" class="red"></p>
+                            </label>
+                        </div>
+                        <div class="type">
+                            <button class="button" id="mcq_btn">M.C.Q</button>
+                            <button class="button" id="tf_btn">True/False</button>
+                        </div>
+                    </div>
+                    <div class="save-container">
+                        <label for="marks" class="input-field">
+                            Marks Contains <span class="red">*</span><br>
+                            <input type="number" class="input mark-input" id="marks" placeholder="Enter Marks">
+                            <p id="marks_warning" class="red"></p>
+                        </label>
+                        <button class="button" id="save_next_button">Save & Next</button>
+                    </div>
+                </form>
+                <form action="/teacherquiz.html" id="quiz_submit_form" class="final-submit-form">
+                    <label for="time_limit" class="input-field">
+                        Time Constraint <span class="red">*</span><br>
+                        <input type="number" class="input mark-input" id="time_limit"
+                            placeholder="Enter Time in Minutes">
+                        <p id="time_limit_warning" class="red"></p>
+                    </label>
+                    <label for="date_of_quiz" class="input-field" id="dob_field">
+                        Date of Quiz <span class="red">*</span><br>
+                        <input type="date" class="input" id="date_of_quiz" placeholder="Enter Date of Birth">
+                        <p id="date_of_quiz_warning" class="red"></p>
+                    </label>
+                    <textarea name="" id="complete_quiz_data" class="hidden-imp"></textarea>
+                    <button class="button" type="submit">Assign</button>
+                    <p class="backedn-error red" id="warning"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-level-1">
+            <div class="level-1-container">
+                <img src="assets/footer_logo.png" alt="footer logo image" class="footer-img">
+                <div class="footer-content">
+                    <div class="footer-content-div">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Notes</a></li>
+                            <li><a href="#">Assignments</a></li>
+                            <li><a href="#">Quizzes</a></li>
+                            <li><a href="#">Code Challenges</a></li>
+                            <li><a href="#">Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-div">
+                        <h3>Community</h3>
+                        <ul>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Chapters</a></li>
+                            <li><a href="#">Events</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-div">
+                        <h3>Solutions</h3>
+                        <ul>
+                            <li><a href="#">Learning Solution</a></li>
+                            <li><a href="#">Carrier Development</a></li>
+                            <li><a href="#">Upskilling</a></li>
+                            <li><a href="#">Networking</a></li>
+                            <li><a href="#">Knowledge Development</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-div">
+                        <h3>Career Building</h3>
+                        <ul>
+                            <li><a href="#">Career Path</a></li>
+                            <li><a href="#">Career Services</a></li>
+                            <li><a href="#">Interview Prep</a></li>
+                        </ul>
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-level-2">
+            <div class="level-2-container">
+                <p>
+                    Copyright © LastClass. All Rights Reserved
+                </p>
+                <div class="social-media-links">
+                    <a href="#"><img src="assets/facebook_icon.svg" alt="facebook"></a>
+                    <a href="#"><img src="assets/Google_icon.svg" alt="Google"></a>
+                    <a href="#"><img src="assets/Twitter_icon.svg" alt="twitter"></a>
+                    <a href="#"><img src="assets/Youtube_icon.svg" alt="youtube"></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="Scripts/navbar.js"></script>
+    <script src="Scripts/CreateQuiz.js"></script>
+</body>
+
+</html>

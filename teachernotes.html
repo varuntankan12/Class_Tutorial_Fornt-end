@@ -66,7 +66,8 @@
                     <div class="navigation-arrow"><img src="assets/DoubleDownArrow.svg" alt="arrow"></div>
                 </div>
                 <div class="create-button-container">
-                    <button class="button upload-button" id="upload_new"><img src="assets/AddIcon.svg" alt="add"> Upload New</button>
+                    <button class="button upload-button" id="upload_new"><img src="assets/AddIcon.svg" alt="add"> Upload
+                        New</button>
                 </div>
                 <div class="notes-container">
                     <div class="note">
@@ -133,7 +134,8 @@
                             <div class="circle">
                                 <img src="assets/UploadFileLogo.svg" alt="upload">
                             </div>
-                            <span class="drop-zone__prompt">Drag and Drop a file or Click to Upload. <span class="red">*</span><br>Max 12MB</span>
+                            <span class="drop-zone__prompt">Drag and Drop a file or Click to Upload. <span
+                                    class="red">*</span><br>Max 12MB</span>
                             <input type="file" name="NotesFile" class="drop-zone__input" id="file_input">
                         </label>
                         <p id="file_input_warning" class="red"></p>
@@ -144,7 +146,8 @@
                         </label>
                         <label for="topic_name" class="input-field">
                             Topic Name <span class="red">*</span><br>
-                            <input type="text" class="input password-field" id="topic_name" placeholder="Enter Topic Coverd in File.">
+                            <input type="text" class="input password-field" id="topic_name"
+                                placeholder="Enter Topic Coverd in File.">
                             <p id="topic_name_warning" class="red"></p>
                         </label>
                     </div>
@@ -221,6 +224,15 @@
 
     <script src="Scripts/navbar.js"></script>
     <script src="Scripts/TeacherNotes.js"></script>
+    <script>
+        document.querySelectorAll(".delete-button").forEach((elem, index) => {
+            elem.addEventListener("click", function (event) {
+                if (!confirm("Do You Really Want to Delete it.")) {
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

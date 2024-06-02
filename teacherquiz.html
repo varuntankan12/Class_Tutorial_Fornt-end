@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignments | ClassTutorials</title>
+    <title>Quiz | ClassTutorials</title>
     <link rel="stylesheet" href="Styles/Common.css">
     <link rel="stylesheet" href="Styles/Navbar.css">
     <link rel="stylesheet" href="Styles/Footer.css">
     <link rel="stylesheet" href="Styles/Button.css">
-    <link rel="stylesheet" href="Styles/AssignmentPage.css">
+    <link rel="stylesheet" href="Styles/TeacherQuiz.css">
 </head>
 
 <body>
@@ -53,21 +53,67 @@
                 </div>
             </div>
         </section><br><br>
-
-        <section class="assignment-details flex-center-column prevent-select">
-            <div class="main-assignment-container flex-center-column">
+        <section class="quiz-details flex-center">
+            <div class="main-quiz-container">
                 <div class="heading-container">
-                    <p>Unit-Assignment / Data Structures - Tree</p><!-- yaha pe assignment ka naam aayega -->
+                    <div class="flex-center">
+                        <a href="/teachernotes.html">Notes</a>
+                        <a href="/teacherquiz.html">Quizzes</a>
+                        <a href="/teacherassignment.html">Assignments</a>
+                    </div>
                     <div class="line"></div>
+                    <div class="navigation-arrow"><img src="assets/DoubleDownArrow.svg" alt="arrow"></div>
+
                 </div>
-                <div class="questions-container" id="questions_container">
-                    
+                <div class="create-button-container">
+                    <a href="/createquizpage.html" target="_blank"><button class="button upload-button"
+                            id="create_new"><img src="assets/AddIcon.svg" alt="add"> Create New</button></a>
+                </div>
+                <div class="quiz-container">
+                    <!-- load this content dynamically using loop and do not Fu** up the class names -->
+                    <div class="quiz">
+                        <p class="date">17-july-2024</p> <!-- this is the date on which quiz is to be held -->
+                        <p>Unit-6 Data Structures - Graphs</p>
+                        <div class="buttons-container">
+                            <button class="button">Release</button> <!-- navigate to answerquiz.html page -->
+                            <button class="button delete-button">Remove</button>
+                        </div>
+                    </div>
+                    <div class="quiz">
+                        <p class="date">17-july-2024</p> <!-- this is the date on which quiz is to be held -->
+                        <p>Unit-6 Data Structures - Graphs</p>
+                        <div class="buttons-container">
+                            <button class="button">Score
+                                Board</button><!-- quiz score board system is not available yet -->
+                            <button class="button delete-button">Remove</button>
+                        </div>
+                    </div>
+                    <div class="quiz">
+                        <p class="date">17-july-2024</p> <!-- this is the date on which quiz is to be held -->
+                        <p>Unit-6 Data Structures - Graphs</p>
+                        <div class="buttons-container">
+                            <button class="button">Score Board</button>
+                            <button class="button delete-button">Remove</button>
+                        </div>
+                    </div>
+                    <div class="quiz">
+                        <p class="date">17-july-2024</p> <!-- this is the date on which quiz is to be held -->
+                        <p>Unit-6 Data Structures - Graphs</p>
+                        <div class="buttons-container">
+                            <button class="button">Score Board</button>
+                            <button class="button delete-button">Remove</button>
+                        </div>
+                    </div>
+                    <div class="quiz">
+                        <p class="date">17-july-2024</p> <!-- this is the date on which quiz is to be held -->
+                        <p>Unit-6 Data Structures - Graphs</p>
+                        <div class="buttons-container">
+                            <button class="button">Score Board</button>
+                            <button class="button delete-button">Remove</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <form action="/studentassignment.html" id="form" class="form">
-                <textarea name="assignment_answer" class="hidden-imp" id="answer_of_student"></textarea>
-                <button class="button" type="submit">Submit</button>
-            </form>
         </section>
     </main>
 
@@ -135,86 +181,27 @@
 
     </footer>
 
-    <script id="assignment_data_container">
-        const Data = {
-            "total_questions": 10,
-            "questions": [
-                {
-                    "question": "When was &quot;Luigi&#039;s Mansion 3&quot; released?",
-                    "min_words": "150",
-                    "max_words": "500",
-                    "student_answer":"",
-                    "status": "right",
-                },
-                {
-                    "question": "In what Homestuck Update was [S] Game Over released?",
-                    "min_words": "150",
-                    "max_words": "500",
-                    "student_answer": "",
-                    "status": "right",
-                },
-                {
-                    "question": "Liam Howlett founded which electronic music group in 1990?",
-                    "min_words": "150",
-                    "max_words": "500",
-                    "student_answer":"",
-                    "status": "right",
-                },
-                {
-                    "question": "Which famous 90&#039;s rap album is commonly referred to as &quot;The Bible of Hip Hop&quot;?",
-                    "min_words": "150",
-                    "max_words": "500",
-                    "student_answer":"",
-                    "status": "right",
-                },
-                {
-                    "question": "How many bytes are in a single Kibibyte?",
-                    "min_words": "150",
-                    "max_words": "500",
-                    "student_answer":"",
-                    "status": "right",
-                },
-                {
-                    "question": "What was the name of Ross&#039; pet monkey on &quot;Friends&quot;?",
-                    "min_words": "150",
-                    "max_words": "500",
-                    "student_answer":"",
-                    "status": "right",
-                },
-                {
-                    "question": "In &quot;My Little Pony: Friendship is Magic&quot;, which of these ponies represents the quality of honesty?",
-                    "min_words": "150",
-                    "max_words": "500",
-                    "student_answer":"",
-                    "status": "right",
-                },
-                {
-                    "question": "Donald Trump won the popular vote in the 2016 United States presidential election.",
-                    "min_words": "150",
-                    "max_words": "500",
-                    "student_answer":"",
-                    "status": "right",
-                },
-                {
-                    "question": "In Dota 2, Wraith King was previously known as...",
-                    "min_words": "150",
-                    "max_words": "500",
-                    "student_answer":"",
-                    "status": "right",
-                },
-                {
-                    "question": "What is the collective noun for vultures?",
-                    "min_words": "150",
-                    "max_words": "500",
-                    "student_answer":"",
-                    "status": "right",
-                }
-            ]
-        }
-
-    </script>
-    <script src="Scripts/AssignmentPage.js"></script>
     <script src="Scripts/navbar.js"></script>
+    <script>
+        document.querySelectorAll(".button").forEach((elem, index) => {
+            elem.addEventListener("click", function (event) {
+                if (window.outerWidth < 780) {
+                    event.preventDefault();
+                    alert("you cant Perform this action on this Device, Please use a Laptop or Desktop.")
+                }
+            });
+        });
+
+        document.querySelectorAll(".delete-button").forEach((elem, index) => {
+            elem.addEventListener("click", function (event) {
+                if (window.innerWidth > 780) {
+                    if (!confirm("Do You Really Want to Delete it.")) {
+                        event.preventDefault();
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
