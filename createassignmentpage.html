@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | ClassTutorials</title>
+    <title>CreateAssignment | ClassTutorials</title>
     <link rel="stylesheet" href="Styles/Common.css">
     <link rel="stylesheet" href="Styles/Navbar.css">
     <link rel="stylesheet" href="Styles/Footer.css">
     <link rel="stylesheet" href="Styles/Button.css">
-    <link rel="stylesheet" href="Styles/StudentDetails.css">
+    <link rel="stylesheet" href="Styles/CreateAssignment.css">
     <link rel="stylesheet" href="Styles/InputStyle.css">
 </head>
 
@@ -43,90 +43,84 @@
     </header>
 
     <main class="container">
-        <section class="enter-student-details flex-center">
-            <form action="/teachersdashboard.html" class="form flex-center-column" id="teacher-details-form">
-                <div class="form-heading-container">
-                    <h2>Before moving forward add your <span class="white">Personal Details</span> and <span
-                            class="white">Academic details.</span></h2>
-                </div>
-                <p class="tag">Personal Details</p>
-                <div class="input-field-container flex-center-column">
-                    <div class="data-container">
-                        <label for="name_input" class="input-field" id="name_field">
-                            Full Name <span class="red">*</span><br>
-                            <input type="text" disabled class="input disabled" value="Sandeep Kumar" id="name_input"
-                                placeholder="your name">
-                            <p id="name_warning" class="red"></p>
-                        </label>
-                        <label for="mobile_input" class="input-field" id="mobile_field">
-                            Mobile Number <span class="red">*</span><br>
-                            <input type="number" class="input mobile-number" id="mobile_input"
-                                placeholder="Enter Mobile Number">
-                            <p id="mobile_warning" class="red"></p>
-                            <p class="region" id="region">+91 |</p>
-                        </label>
-                    </div>
-                    <div class="data-container">
-                        <label for="position_input" class="input-field" id="name_field">
-                            Position <span class="red">*</span><br>
-                            <input type="text" class="input" id="position_input" placeholder="Position name">
-                            <p id="position_warning" class="red"></p>
-                        </label>
-                        <div class="gender-container">
-                            <p>Gender <span class="red">*</span></p>
-                            <div class="select-gender">
-                                <label for="male" id="male_label"><input type="radio" id="male" name="gender"
-                                        value="male" checked>
-                                    Male</label>
-                                <label for="female" id="female_label"><input type="radio" id="female" name="gender"
-                                        value="female">
-                                    Female</label>
-                                <label for="other" id="other_label"><input type="radio" id="other" name="gender"
-                                        value="other">
-                                    Other</label>
+        <section class="container-full flex-center">
+            <div class="main-content-container">
+                <h2>Create New Quiz</h2>
+                <div class="total-questions-container" id="total_question_container">
+                    <!-- <div class="question-container">
+                        <div class="question">
+                            <div class="question-data">
+                                <span id="ques_no_1">1.</span>
+                                <p id="question_content_of_1">The most efficient algorithm for finding the number of
+                                    connected
+                                    components in an
+                                    undirected graph on n vertices and m
+                                    edges has time complexity.</p>
+                            </div>
+                            <div class="edit-buttons flex-center-column">
+                                <button id="edit_btn_of_ques_1">
+                                    <svg width="29" height="30" viewBox="0 0 29 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14 3.66797H4.66667C3.95942 3.66797 3.28115 3.94892 2.78105 4.44902C2.28095 4.94911 2 5.62739 2 6.33464V25.0013C2 25.7085 2.28095 26.3868 2.78105 26.8869C3.28115 27.387 3.95942 27.668 4.66667 27.668H23.3333C24.0406 27.668 24.7189 27.387 25.219 26.8869C25.719 26.3868 26 25.7085 26 25.0013V15.668"
+                                            stroke="white" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M22.4998 3.16827C23.0303 2.63784 23.7497 2.33984 24.4998 2.33984C25.25 2.33984 25.9694 2.63784 26.4998 3.16827C27.0303 3.6987 27.3283 4.41813 27.3283 5.16827C27.3283 5.91842 27.0303 6.63784 26.4998 7.16827L13.9998 19.6683L8.6665 21.0016L9.99984 15.6683L22.4998 3.16827Z"
+                                            stroke="white" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <button id="delete_btn_of_ques_1" class="delete-button">
+                                    <svg width="24" height="31" viewBox="0 0 24 31" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2.00016 27.3346C2.00016 28.2187 2.35135 29.0665 2.97647 29.6917C3.60159 30.3168 4.44944 30.668 5.3335 30.668H18.6668C19.5509 30.668 20.3987 30.3168 21.0239 29.6917C21.649 29.0665 22.0002 28.2187 22.0002 27.3346V7.33464H2.00016V27.3346ZM5.3335 10.668H18.6668V27.3346H5.3335V10.668ZM17.8335 2.33464L16.1668 0.667969H7.8335L6.16683 2.33464H0.333496V5.66797H23.6668V2.33464H17.8335Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
-                <p class="tag">Academic Details</p>
-                <div class="input-field-container flex-center-column">
-                    <div class="data-container">
-                        <label for="select_course" class="input-field">
-                            Select Course <span class="red">*</span><br>
-                            <select name="course" id="select_course" class="select-course">
-                                <option value="">Select Course</option>
-                                <option value="btech">B. tech</option>
-                                <option value="bca">BCA</option>
-                            </select>
-                            <p id="select_course_warning" class="red"></p>
+                <form class="input-form"><!-- dont touch this form. -->
+                    <label for="question_input" class="question-input-field">
+                        Question <span class="red">*</span><br>
+                        <textarea id="question_input" class="input-area" placeholder="Enter Your Question"></textarea>
+                        <p id="question_input_warning" class="red"></p>
+                    </label>
+                    <div class="word-limit-container">
+                        <label for="min_words" class="input-field">
+                            Minimum words <span class="red">*</span><br>
+                            <input type="number" class="input mark-input" id="min_words"
+                                placeholder="Enter Minimum words">
+                            <p id="min_words_warning" class="red"></p>
                         </label>
-                        <label for="select_branch" class="input-field">
-                            Select Department <span class="red">*</span><br>
-                            <select name="branch" id="select_branch" class="select-Branch">
-                                <option value="">Select Department</option><!-- load branches of course -->
-                                <option value="cse">Computer Science and Engineering</option>
-                                <option value="me">Machenical</option>
-                                <option value="ee">Electrical Engineering</option>
-                            </select>
-                            <p id="select_branch_warning" class="red"></p>
+                        <label for="max_words" class="input-field">
+                            Minimum words<br>
+                            <input type="number" class="input mark-input" id="max_words"
+                                placeholder="Enter Maximum words">
+                            <p id="max_words_warning" class="red"></p>
                         </label>
                     </div>
-                    <div class="data-container">
-                        <label for="select_main_subject" class="input-field">
-                            Select Main Subject <span class="red">*</span><br>
-                            <select name="semester" id="select_main_subject" class="select-semester">
-                                <option value="">Select Subject</option><!-- load all subject of that teacher -->
-                                <option value="dsa">Data Structure and Algorithms</option>
-                                <option value="os">Operating Systems</option>
-                                <option value="dbms">Database Management Systems</option>
-                            </select>
-                            <p id="select_main_subject_warning" class="red"></p>
-                        </label>
+                    <div class="save-container">
+                        <button class="button" id="save_next_button">Save & Next</button>
                     </div>
-                </div>
-                <button class="button save-button flex-center" type="submit">Save</button>
-                <p class="backend-failure red">wrong username and password</p>
-            </form>
+                </form>
+
+
+                <form action="/teacherassignment.html" id="quiz_submit_form" class="final-submit-form">
+                    <label for="last_date_of_assignment" class="input-field" id="dob_field">
+                        Last Submission date <span class="red">*</span><br>
+                        <input type="date" class="input" id="last_date_of_assignment"
+                            placeholder="Enter Date of submission">
+                        <p id="last_date_of_assignment_warning" class="red"></p>
+                    </label>
+                    <textarea name="" id="complete_quiz_data" class="hidden-imp"></textarea>
+                    <button class="button" type="submit">Assign</button>
+                    <p class="backedn-error red" id="warning"></p>
+                </form>
+            </div>
         </section>
     </main>
 
@@ -195,7 +189,7 @@
     </footer>
 
     <script src="Scripts/navbar.js"></script>
-    <script src="Scripts/TeacherDetails.js"></script>
+    <script src="Scripts/CreateAssignment.js"></script>
 </body>
 
 </html>
